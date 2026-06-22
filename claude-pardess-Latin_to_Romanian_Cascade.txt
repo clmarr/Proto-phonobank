@@ -1,0 +1,410 @@
+$ Latin to Romanian Sound Changes
+$ Based on Pardess (1990), "From Latin to Romanian"
+$ Reformulated in DiaSim cascade format
+$ Rules in relative chronological order
+
+$ ============================================================
+$ BALKAN ROMANCE PERIOD (1st-6th centuries A.D.)
+$ ============================================================
+
+=Balkan Romance
+
+$ R1 -- Loss of [h]
+h > ∅
+
+$ R2A -- Monophthongization of AE (ae > eː)
+a e̯ > eː
+
+$ R2B -- Monophthongization of OE (oe > eː)
+o e̯ > eː
+
+$ R3A -- Reduction of word-final [m]
+$ In monosyllables: m > n
+$ In polysyllables: m > ∅
+$ DiaSim can't easily distinguish syllable count, so split contextually:
+$ Approximation: delete final m after unstressed vowel
+m > ∅ / [-stres] __ #
+
+$ R3B -- Loss of [n] before fricative (with compensatory lengthening)
+$ ns, nf > ːs, ːf (lengthening the preceding vowel)
+[+syl] n > [+long] ∅ / __ [+cont,-son]
+
+$ R4A -- Syncope (deletion of short unstressed vowels between certain consonants)
+$ Condition: at least one adjacent C is a sonorant
+[-long,-stres,+syl] > ∅ / [+son,+cons] __ [+cons]
+[-long,-stres,+syl] > ∅ / [+cons] __ [+son,+cons]
+
+$ R4B -- Dissimilation tl > kl
+t > k / __ l
+
+$ R5A -- Deletion of word-final oral stops
+[-cont,-son,-nas] > ∅ / __ #
+
+$ R5B -- Paragogic [e] after word-final [l]
+∅ > e / l __ #
+
+$ R5C -- Metathesis of word-final [r]
+$ Vr# > rV#
+[+syl] r > r [+syl] / __ #
+
+$ R6 -- Fronting of [w] to [β]
+w > β
+
+$ R7 -- Fortition of syllable-initial [j] to [dj]
+$ Word-initial j > dʲ (or a palatal affricate)
+j > ɟ / # __
+$ After consonant (onset position)
+j > ɟ / [+cons] __
+
+$ R8 -- Simplification of obstruent + strident + obstruent cluster
+$ Delete first obstruent before [s/z] + obstruent
+[-son] > ∅ / __ [+strid] [-son]
+
+$ R9 -- Deletion of [k] in [nkt]
+k > ∅ / n __ t
+
+$ R10A -- Sporadic assimilation rs > ss
+$ (sporadic, may need lexical exceptions)
+r s > s s
+
+$ R10B -- Assimilation ps > ss
+p s > s s
+
+$ R10Ca -- Partial assimilation of velars after stressed vowel
+$ ks > ps, kt > pt, gn > mn
+k > p / [+stres] __ {s;t}
+g > m / [+stres] __ n
+
+$ R10Cb -- Total assimilation of velars before stress (pretonic)
+$ ks > ss, gn > nn
+k > s / [-stres] __ s
+g > n / [-stres] __ n
+
+$ R11 -- Labialization of [kw], [gw] before [a]
+$ kʷa > pa, gʷa > ba (assuming labiovelars represented as kʷ, gʷ)
+kʷ > p / __ a
+gʷ > b / __ a
+
+$ R12 -- Prothesis: #sC > #isC (before non-back obstruent)
+∅ > i / # __ s [-son,-back]
+
+$ R13A -- Lengthening and stress shift of second vowel in hiatus
+$ Unstressed non-low V in hiatus becomes long and stressed
+[-lo,-stres,+syl] > [+long,+stres] / [+syl] __
+
+$ R13B -- Raising of short unstressed [o], [e] adjacent to vowel
+$ o > u, e > i in hiatus
+[-hi,-stres,-long,+back,+round,+syl] > [+hi] / [+syl] __
+[-hi,-stres,-long,+back,+round,+syl] > [+hi] / __ [+syl]
+[-hi,-stres,-long,-back,+front,+syl] > [+hi] / [+syl] __
+[-hi,-stres,-long,-back,+front,+syl] > [+hi] / __ [+syl]
+
+$ R13C -- Contraction of identical adjacent vowels
+$ ViVi > Vi (handled implicitly by degemination later or lexically)
+
+$ R13D -- Loss of syllabicity of short unstressed high vowels in hiatus
+$ i > j, u > w adjacent to another vowel
+[+hi,-long,-stres,+syl,-back] > [-syl] / [+syl] __
+[+hi,-long,-stres,+syl,-back] > [-syl] / __ [+syl]
+[+hi,-long,-stres,+syl,+back] > [-syl] / [+syl] __
+[+hi,-long,-stres,+syl,+back] > [-syl] / __ [+syl]
+
+$ R13E -- Laxing of stressed [e] (e > ɛ)
+$ Using tense feature
+[+syl,-hi,-lo,-back,+stres] > [-tense]
+
+$ R13F -- Lengthening of word-final front high vowel
+[+hi,-back,+syl] > [+long] / __ (#)
+[+hi,-back,+syl] > [+long] / __ [+cons] #
+
+$ R13G -- Lowering of short [i] to [e]
+[+hi,-back,-long,+syl] > [-hi]
+
+$ R14 -- Apheresis: loss of unstressed initial [e] before [s/z] + C
+e > ∅ / # __ [+strid,+ant,+cor] [-son]
+
+$ R15 -- Vowel contraction in hiatus
+$ Short V + long stressed V of same height > single long V
+$ Complex rule, approximate:
+[-long,+syl] > ∅ / __ [+long,+stres,+syl]
+
+$ R16 -- Loss of vowel length
+[+syl] > [-long]
+
+$ R17 -- Deletion of [w] before vowel
+w > ∅ / __ [+syl]
+
+$ R18A -- Gemination of stop before [j] after vowel
+$ V_Cj > V_CCj (gemination)
+$ DiaSim: approximate with feature spreading
+[-son,-cont] ∅ > [-son,-cont] [-son,-cont] / [+syl] __ j
+
+$ R18B -- Affrication of alveolar stops before [j]
+$ t > tʃ, d > dʒ / __ j
+t > t͡ʃ / __ j
+d > d͡ʒ / __ j
+
+$ R18C -- Affrication of velars before [j]
+$ k > tʃ, g > dʒ / __ j
+k > t͡ʃ / __ j
+g > d͡ʒ / __ j
+
+$ R18D -- Absorption of [j] after affricate
+j > ∅ / [+delrel] __
+
+$ R18E -- Assimilation of stop to following affricate
+$ CiCj > CjCj where Cj is affricate
+[-cont] > [+delrel,-ant,+cor] / __ [+delrel,-ant,+cor]
+
+$ R19 -- Depalatalization of affricates after stressed vowel
+$ tʃ > ts, dʒ > dz / stressed V __
+[+delrel,-ant,+cor] > [+ant] / [+stres,+syl] __
+
+$ R20 -- Glide metathesis (attraction of glide)
+$ V́...Cj > V́j...C (metathesis of glide to after stressed vowel)
+$ Complex metathesis, approximate:
+[+stres,+syl] [+cons] j > [+stres,+syl] j [+cons]
+
+$ R21 -- Spirantization of intervocalic [b]
+b > β / [+syl] __ [+syl]
+
+$ R22A -- Word-initial β > v
+β > v / # __
+
+$ R22B -- Occlusivization of β after consonant
+β > b / [+cons] __
+
+$ R22C -- β > w before resonant
+β > w / __ [+son,+cons]
+
+$ R22D -- Sporadic β > g near [u]
+$ (sporadic, lexically conditioned)
+β > g / u __
+β > g / __ u
+
+$ R22E -- β > ∅ elsewhere
+β > ∅
+
+$ R23 -- Degemination (except ll, nn, rr)
+$ Geminate > singleton except for coronal sonorants
+[-son] [-son] > [-son] / @ __
+$ More specifically for geminates of same segment:
+p p > p
+b b > b
+t t > t
+d d > d
+k k > k
+g g > g
+f f > f
+s s > s
+
+$ R24 -- Affrication of velars before front vowel
+$ k > tʃ, g > dʒ / __ e,i
+k > t͡ʃ / __ [+syl,-back]
+g > d͡ʒ / __ [+syl,-back]
+
+$ R25A -- Final s > j in monosyllables (via h, then glide)
+$ Approximation: final s after stressed V > j
+s > j / [+stres,+syl] __ #
+
+$ R25B -- Loss of final [s] in polysyllables
+$ After unstressed vowel
+s > ∅ / [-stres,+syl] __ #
+
+$ R25C -- Generalization of final -i as 2sg marker
+$ (morphological, not purely phonological)
+
+$ ============================================================
+$ COMMON ROMANIAN PERIOD (6th-11th centuries A.D.)
+$ ============================================================
+
+=Common Romanian
+
+$ R26A -- rr becomes alveolar trill (feature-internal, no symbol change needed in most analyses)
+$ R26B -- Word-initial r becomes trilled rr
+$ r > rː / # __
+r > rː / # __
+
+$ R27A -- Tensing of ɛ before nasal + oral consonant (bleeds R27B)
+[-tense,+syl] > [+tense] / __ [+nas] [-nas,+cons]
+
+$ R27B -- Diphthongization of lax ɛ to jɛ
+[-tense,-back,+syl] > j [-tense,-back,+syl]
+$ Or using null insertion:
+∅ [-tense,-back,+syl,-hi,-lo] > j [-tense,-back,+syl,-hi,-lo]
+
+$ R28 -- Unstressed o > u
+[-hi,+back,+round,-stres,+syl,-lo] > [+hi]
+
+$ R29A -- Loss of stress on postposed article forms of *ellu
+$ (morphologically conditioned)
+
+$ R29B -- Apheresis and enclisis of postposed article
+$ e > ∅ / # __ (in article forms)
+$ (morphologically conditioned)
+
+$ R30 -- Preyodization of word-initial [e]
+∅ > j / # __ e
+
+$ R31A -- Metaphony: stressed mid-vowels lax before [a] or [e]
+$ except when intervening nasal
+[+syl,-hi,-lo,+stres] > [-tense] / __ [+cons]* [-hi,-round,+syl]
+
+$ R31B -- Diphthongization of lax mid-vowels
+$ ɛ > ea, ɔ > oa
+$ Front lax mid > ea
+∅ [-tense,-back,+syl,-hi,-lo] > e̯ a
+$ Back lax mid > oa  
+∅ [-tense,+back,+syl,-hi,-lo,+round] > o̯ a
+
+$ R32 -- Stress shift in éa > eá (with e becoming non-syllabic)
+e a > e̯ ˈa / [+stres] __
+
+$ R33 -- Raising of a > ə and o > u before non-geminate nasal
+[+lo,+syl] > [-lo] / __ [+nas,-long]
+[+back,-hi,+syl,+round] > [+hi] / __ [+nas,-long]
+
+$ R34 -- Rhotacism: l > r between vowels
+l > r / [+syl] __ [+syl]
+
+$ R35A -- ll > w before unstressed [a]
+lː > w / __ [-stres] a
+
+$ R35B -- Degemination of ll
+lː > l
+
+$ R36A -- Loss of w in VwV when neither V is stressed
+w > ∅ / [-stres,+syl] __ [-stres,+syl,+lo]
+
+$ R36B -- Lengthening of f.sg definite article a
+$ (morphologically conditioned)
+
+$ R36C -- uw > uv
+w > v / u __ a
+
+$ R37A -- Raising of non-initial unstressed [a] to [ə]
+[+lo,-stres,+syl,-long] > [-lo] / [+cons] __
+
+$ R37B -- Degemination of geminate vowels
+$ (general cleanup)
+
+$ R38 -- Desyllabification of [e] before [a]
+e > e̯ / __ a
+
+$ R39 -- Lowering of unstressed internal [i]
+[+hi,-back,-stres,+syl] > [-hi] / [+cons] __ [+cons]
+
+$ R40 -- Diphthongization of [i]: insertion of [j]
+∅ > j / __ i
+
+$ R41A -- Palatalization of non-occlusive alveolars before [j]
+$ s > ʃ, l > ʎ, n > ɲ / __ j
+s > ʃ / __ j
+l > ʎ / __ j
+n > ɲ / __ j
+
+$ R41B -- Absorption of [j] after palatal
+j > ∅ / [-ant,+hi,+cor] __
+
+$ R42A -- Affrication of alveolar stops before [j]
+$ t > ts, d > dz / __ j
+t > t͡s / __ j
+d > d͡z / __ j
+
+$ R42B -- Absorption of [j] after affricate
+j > ∅ / [+delrel] __
+
+$ R43 -- Palatalization of [l] after velar
+l > ʎ / [-cont,-ant,-cor] __
+
+$ R44 -- Fronting of [ə] after ʎ and ɲ
+[-lo,+back,+syl,-hi] > [-back,+front] / {ʎ;ɲ} __
+
+$ R45A -- Assimilation s > ʃ before ʃ
+s > [-ant] / __ [+delrel,-ant]
+
+$ R45B -- Dissimilation ʃ > t after ʃ
+[+delrel,-ant] > [-delrel] / ʃ __
+
+$ ============================================================
+$ DACO-ROMANIAN PERIOD (11th century onward)
+$ ============================================================
+
+=Daco-Romanian
+
+$ R46A -- Backing of e/ɛ after labial before back-vowel syllable
+$ e, ɛ > ə, a / labial __ ... V[+back]
+[-back,-hi,+syl] > [+back,-front] / [+lab] __ [+cons]* [+back,+syl]
+
+$ R46B -- Loss of ə before a: əa > a
+ə a > a
+
+$ R47A -- Raising of ə before n or mCV
+$ ə > ɨ / __ n(C)
+ə > ɨ / __ n
+ə > ɨ / __ m [+cons] [+syl]
+
+$ R47B -- Raising of e before nasal
+e > i / __ [+nas]
+
+$ R48 -- Degemination of nn
+nː > n
+
+$ R49 -- Raising of ə before r or s plus consonant
+ə > ɨ / __ r [+cons]
+ə > ɨ / __ s [+cons]
+
+$ R50 -- Backing of front vowels after rr (trill)
+[-back,+syl] > [+back] / rː __
+
+$ R51 -- Simplification of rr > r
+rː > r
+
+$ R52A -- Deaffrication of voiced alveolar affricate
+$ dz > z
+d͡z > z
+
+$ R52B -- Deaffrication of voiced palatal affricate before round vowel
+$ dʒ > ʒ / __ o,u
+d͡ʒ > ʒ / __ [+round,+syl]
+
+$ R53A -- Monophthongization of ea after ʃ or ts (sporadic)
+e̯ a > a / {ʃ;t͡s} __
+
+$ R53B -- Monophthongization of ea before syllable containing e
+e̯ a > e / __ [+cons]* e
+
+$ R54 -- Delateralization of ʎ to j
+ʎ > j
+
+$ R55 -- Denasalization of ɲ to j
+ɲ > j
+
+$ R56 -- Loss of j before i
+j > ∅ / __ i
+
+$ R57 -- jea > ja
+j e̯ a > j a
+
+$ R58 -- Word-final ə > e after i
+ə > e / i __ #
+
+$ R59A -- Devoicing of word-final high vowels
+$ (except after consonant + liquid)
+[+hi,+syl] > [-voi] / [+cons] __ #
+
+$ R59B -- Loss of word-final voiceless w
+[-syl,-cons,-voi,+back,+round] > ∅ / __ #
+
+$ R59C -- ii > i word-finally
+i i > i / __ #
+
+$ R60 -- Loss of final l of masculine singular definite article
+$ (morphologically conditioned: article only)
+l > ∅ / __ #
+
+$ ============================================================
+$ END OF CASCADE
+$ ============================================================
+
+~Romanian $ Gold stage: Modern Romanian
