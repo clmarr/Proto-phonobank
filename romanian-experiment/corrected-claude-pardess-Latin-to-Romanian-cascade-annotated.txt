@@ -334,7 +334,7 @@ $ $$ET nos > noi 'we'; vos > voi 'you pl'; post > apoi 'afterwards, then'; tres 
 s > j / [+stres,+syl] __ # $$!!MISS Although this is faithful, this formalism doesn't capture Pardess' stated intention that this applies to MONOSYLLABLES. The rule should be fixed, with a note added. To indicate that these are monosyllables, one can have the following for the prior context: "# ([-syl])* [+stres]". Critic notes this as "a reasonable but imperfect proxy". It should have at least left a note-- or otherwise amended as specified here. 
 
 $ R25B -- Loss of final [s] in polysyllables
-$ $$PG 80-81 $$!! should also have page 139.
+$ $$PG 80-81 $$!! should also have page 139. $$!!MISS should be 81-82. 
 $ $$ET audis > auzi 'you hear sg'; facetis > faceţi 'you do pl'; casas > case 'houses'; lupos > lupi 'wolves'
 s > ∅ / [-stres,+syl] __ # $$!!MISS This should be "s > ∅ / __ #", as Pardess formulates it on page 81: the other final /s/'s have become /j/." Otherwise would need note that [-stres,+syl] as a prior context implies polysyllable even though Pardess did not write it as such. And this might not work, if there are diphthongs. Critic notes this as "a reasonable but imperfect proxy". It should have at least left a note-- or otherwise amended as specified here. 
  
