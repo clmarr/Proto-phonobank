@@ -26,6 +26,8 @@ currently not included, but present as a GLOBAL problem to fix
 
 2. Although Pardess says that [acc] is specifically PRIMARY stress, the actor and critic basically always use +stres instead, which could be primary or secondary. 
 
+Not counting -- usage of "j" for Pardess' "y", which is what Pardess intends anyways and a clear Americanist/IPA issue.
+
 In each cell for columns other than the first -- "0" (ab initio): means actor's output was good, and critic rightly did not (falsely) 'correct' it. 
 	"1": actor's output had an error, critic corrected it. 
 	"-1": actor's output had an error, critic missed it. 
