@@ -1,0 +1,26 @@
+This explains the june26-critic-report.csv's contents, which compares the performance of the critic LLM in catching error's in the actor's ound change extraction from a PDF 
+
+#Background
+
+The PDF used for extraction was Pardess 1990 "From Latin to Romanian: Phonological Rules", file "Pardess_From_Latin_to_Romanian_phonol.pdf" 
+
+actor output: "extractor-claude-pardess-Latin_to-Romanian_Cascade.txt"
+critic output: "extrcritic-corected-pardess-Latin-to-Romanian.txt"
+critic's report: "extrcritic-Latin-Romanian-Report"
+human annotated gold corrected version: corrected-claude-pardess-Latin-to-Romanian-cascade-annotated.txt
+
+#Structure of the report file. 
+
+
+One row for each sound change. Columns include first a column for the name of the sound change in Pardess, and then, in order, by title (in the header first row) -- "Input": the sound change input. "Output": sound change output. "Context": sound change context. "Pages": page attribution (other than the block starting on 137, see below). "Etyma": etyma attribution. "Order": ordering of rules. 
+
+currently not included, but present as a GLOBAL problem to fix -- the critic never catches that, for the page report, the actor does not report the secondary mention of sound changes in the list starting on page 137. Other page number error misses are noted however. 
+
+In each cell for columns other than the first -- "0" (ab initio): means actor's output was good, and critic rightly did not (falsely) 'correct' it. 
+	"1": actor's output had an error, critic corrected it. 
+	"-1": actor's output had an error, critic missed it. 
+	"-1.5": actor's output had no error, critic erroneously changed something. 
+	sum of absolute values of a column will be how prone actor is to errors in that aspect
+	sum of values (not absolute) of a column how well the critic performed at fixing errors that showed up 
+
+	"0.5": actor's output had error, critic made a fix that either introduced problems or did not quite fix it. 

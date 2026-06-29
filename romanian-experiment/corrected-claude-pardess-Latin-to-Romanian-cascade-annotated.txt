@@ -12,6 +12,14 @@ $$!! - These four characters '$$!!' marks a CORRECTION for the CRITIC. ACTOR sho
 
 $$:) - This indicates a rule and comment extraction block that the actor got correct, except for leaving out the page number where the rule is present in the rule summary in pages 137--141 in Pardess 1990. 
 
+$$ The following indicate the performance of the critic in catching and correcting these, as done in late June 2026, file "extrcritic-corrected-pardess-Latin-to-Romanian.txt"
+$$ $$!!HIT -- means the critic caught it and fixed it {good}$$ 
+$$!FALSEHIT -- false positive, non-error fixed.
+$$ $$!BADFIX -- error detected but fix doesn't fix it, or introduces problems.
+$$ $$!!HITWARNING -- critic caught and fixed something but there's a danger in what it did. 
+$$ $$!!MISS -- the critic missed the error.
+$$ currently not included, but present as a GLOBAL problem to fix -- the critic never catches that, for the page report, the actor does not report the secondary mention of sound changes in the list starting on page 137. Other page number error misses are noted however. 
+
 $ ============================================================
 $ BALKAN ROMANCE PERIOD (1st-6th centuries A.D.)
 $ ============================================================
@@ -19,7 +27,7 @@ $ ============================================================
 =Balkan Romance
 
 $ R1 -- Loss of [h]
-$ $$PG 45-46 $$!! should be "$$PG 46-47, 137"
+$ $$PG 45-46 $$!! should be "$$PG 46-47, 137" $$!!MISS 
 $ $$ET homo > om 'man'; prehendere > a prinde 'to grasp'; cohortem > curte 'courtyard'; habere > a avea 'to have'; hiberna > iarnă 'winter' 
 h > ∅
 $$:)
@@ -28,6 +36,7 @@ $ R2A -- Monophthongization of AE (ae > eː)
 $ $$PG 47 $$!! should be "$$PG 47, 137"
 $ $$ET caelum > cer 'sky'; taedam > zadă 'larch tree'; faenum > fîn 'hay'
 a e̯ > eː $$!! output wrong, should be "ɛː". Rule should be: "a e̯ > ɛː". Furthermore, a comment on the fact that the actor extracted both R2A and R2B with "e̯". This may be more faithful to Latin, but note that the source actually used "j" rather than "e̯" in the rule formulations. This is why R2B does not get a "$$:)"
+	$$!!MISS 
 
 $ R2B -- Monophthongization of OE (oe > eː)
 $ $$PG 47-48 $$!! should also have 137, e.g.: "$$PG 47, 137"
@@ -40,7 +49,7 @@ $ $$ET quem > cine 'who(m)'; vetulum > vechi 'old'; cum > cu 'with'; quam > ca '
 $ In monosyllables: m > n; in polysyllables: m > ∅
 m > ∅ / [-stres,+syl] __ #
 m > n / [+stres,+syl] __ #
-$$:)
+$$!! Switched order of rules. Here it has no effect but this is still something to be avoided $$!!HIT
 
 $ R3B -- Loss of [n] before fricative (with compensatory lengthening)
 $ $$PG 49 $$!! should also have  137
@@ -51,8 +60,8 @@ $$:)
 $ R4A -- Syncope (deletion of short unstressed vowels)
 $ $$PG 50-51 $$!! should also have page 137
 $ $$ET oricula > ureche 'ear'; oculum > ochi 'eye'; vetulum > vechi 'old'; stabulum > staul 'stable'; veteranum > bătrîn 'old man'; calidum > cald 'hot'; dominum > domn 'lord' $$!! missed the following: assula > aschie 'splinter', domina > doamnă 'lady', viridem > verde 'green'
-[-long,-stres,+syl] > ∅ / [+son,+cons] __ [+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+son,+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+cons] [+syl]". 
-[-long,-stres,+syl] > ∅ / [+cons] __ [+son,+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+son,+cons] [+syl]". 
+[-long,-stres,+syl] > ∅ / [+son,+cons] __ [+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+son,+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+cons] [+syl]". $$!!HITWARNING -- the critic correctly notes that Pardess doesn't explicitly state this happens only to unstressed vowels. He says "usually post-tonic". His examples show only cases where non-stressed vowels (not marked with an acute accent diacritic -- not tonic-- and not initial -- not countertonic) are marked though. Rewriting the rule to lack "-stres" is technically faithful-- but dangerous. The critic did however get that it is a high vowel that is targeted. 
+[-long,-stres,+syl] > ∅ / [+cons] __ [+son,+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+son,+cons] [+syl]". $$!!HITWARNING -- the critic correctly notes that Pardess doesn't explicitly state this happens only to unstressed vowels. He says "usually post-tonic". His examples show only cases where non-stressed vowels (not marked with an acute accent diacritic -- not tonic-- and not initial -- not countertonic) are marked though. Rewriting the rule to lack "-stres" is technically faithful-- but dangerous. The critic did however get that it is a high vowel that is targeted. 
 
 $$!! these rules don't handle the case where BOTH Pardess (p50)'s "Ci" and "Cj" are resonants. The following rule is necessary: [-stres,+hi,-long] > ∅ / [+prim] [+son,+cons] __ [+son,+cons] [+syl]. 
 
