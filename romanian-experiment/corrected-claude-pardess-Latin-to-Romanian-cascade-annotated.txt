@@ -12,6 +12,15 @@ $$!! - These four characters '$$!!' marks a CORRECTION for the CRITIC. ACTOR sho
 
 $$:) - This indicates a rule and comment extraction block that the actor got correct, except for leaving out the page number where the rule is present in the rule summary in pages 137--141 in Pardess 1990. 
 
+$$ The following indicate the performance of the critic in catching and correcting these, as done in late June 2026, file "extrcritic-corrected-pardess-Latin-to-Romanian.txt"
+$$ $$!!HIT -- means the critic caught it and fixed it {good}$$ 
+$$!!FALSEHIT -- false positive, non-error fixed.
+$$ $$!!BADFIX -- error detected but fix doesn't fix it, or introduces problems.
+$$ $$!!HITWARNING -- critic caught and fixed something but there's a danger in what it did. 
+$$ $$!!MISS -- the critic missed the error.
+$$ $$!!NEEDNOTE -- need to note something that isn't quite faithful to source in extraction, but was justified.
+$$ currently not included, but present as a GLOBAL problem to fix -- the critic never catches that, for the page report, the actor does not report the secondary mention of sound changes in the list starting on page 137. Other page number error misses are noted however. 
+
 $ ============================================================
 $ BALKAN ROMANCE PERIOD (1st-6th centuries A.D.)
 $ ============================================================
@@ -19,7 +28,7 @@ $ ============================================================
 =Balkan Romance
 
 $ R1 -- Loss of [h]
-$ $$PG 45-46 $$!! should be "$$PG 46-47, 137"
+$ $$PG 45-46 $$!!MISS should be "$$PG 46-47, 137" 
 $ $$ET homo > om 'man'; prehendere > a prinde 'to grasp'; cohortem > curte 'courtyard'; habere > a avea 'to have'; hiberna > iarnă 'winter' 
 h > ∅
 $$:)
@@ -27,12 +36,14 @@ $$:)
 $ R2A -- Monophthongization of AE (ae > eː)
 $ $$PG 47 $$!! should be "$$PG 47, 137"
 $ $$ET caelum > cer 'sky'; taedam > zadă 'larch tree'; faenum > fîn 'hay'
-a e̯ > eː $$!! output wrong, should be "ɛː". Rule should be: "a e̯ > ɛː". Furthermore, a comment on the fact that the actor extracted both R2A and R2B with "e̯". This may be more faithful to Latin, but note that the source actually used "j" rather than "e̯" in the rule formulations. This is why R2B does not get a "$$:)"
+a e̯ > eː $$!!MISS output wrong, should be "ɛː". Rule should be: "a e̯ > ɛː".	
+	$$!!HIT The actor extracted both R2A and R2B with "e̯". This may be more faithful to Latin, but note that the source actually used "t rather than "e̯" in the rule formulations -- this should have been systematically noted, but wasn't. Critic added a remark about this to comment section correctly.
 
 $ R2B -- Monophthongization of OE (oe > eː)
 $ $$PG 47-48 $$!! should also have 137, e.g.: "$$PG 47, 137"
 $ $$ET foetus > făt 'fetus'; foeta > fată 'girl'
 o e̯ > eː
+$$!!HIT The actor extracted both R2A and R2B with "e̯". This may be more faithful to Latin, but note that the source actually used "t rather than "e̯" in the rule formulations -- this should have been systmatically noted, but wasn't. Critic added a remark about this to comment section correctly.
 
 $ R3A -- Reduction of word-final [m]
 $ $$PG 48-49 $$!! should also have page 137
@@ -40,21 +51,21 @@ $ $$ET quem > cine 'who(m)'; vetulum > vechi 'old'; cum > cu 'with'; quam > ca '
 $ In monosyllables: m > n; in polysyllables: m > ∅
 m > ∅ / [-stres,+syl] __ #
 m > n / [+stres,+syl] __ #
-$$:)
+$$!!HIT Switched order of rules. Here it has no effect but this is still something to be avoided
 
 $ R3B -- Loss of [n] before fricative (with compensatory lengthening)
-$ $$PG 49 $$!! should also have  137
+$ $$PG 49 $$!! should also have 137
 $ $$ET mensa > masă 'table'; pensum > păs 'grievance'; densum > des 'often'; mensura > măsură 'measure'; consuere > a coase 'to sew'
 [+syl] n > [+long] ∅ / __ [+cont,-son]
 $$:) 
 
 $ R4A -- Syncope (deletion of short unstressed vowels)
 $ $$PG 50-51 $$!! should also have page 137
-$ $$ET oricula > ureche 'ear'; oculum > ochi 'eye'; vetulum > vechi 'old'; stabulum > staul 'stable'; veteranum > bătrîn 'old man'; calidum > cald 'hot'; dominum > domn 'lord' $$!! missed the following: assula > aschie 'splinter', domina > doamnă 'lady', viridem > verde 'green'
-[-long,-stres,+syl] > ∅ / [+son,+cons] __ [+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+son,+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+cons] [+syl]". 
-[-long,-stres,+syl] > ∅ / [+cons] __ [+son,+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+son,+cons] [+syl]". 
+$ $$ET oricula > ureche 'ear'; oculum > ochi 'eye'; vetulum > vechi 'old'; stabulum > staul 'stable'; veteranum > bătrîn 'old man'; calidum > cald 'hot'; dominum > domn 'lord' $$!!MISS missed the following: assula > aschie 'splinter', domina > doamnă 'lady', viridem > verde 'green'
+[-long,-stres,+syl] > ∅ / [+son,+cons] __ [+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+son,+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+cons] [+syl]". $$!!HITWARNING -- the critic correctly notes that Pardess doesn't explicitly state this happens only to unstressed vowels. He says "usually post-tonic". His examples show only cases where non-stressed vowels (not marked with an acute accent diacritic -- not tonic-- and not initial -- not countertonic) are marked though. Rewriting the rule to lack "-stres" is technically faithful-- but dangerous. The critic did however get that it is a high vowel that is targeted. 
+[-long,-stres,+syl] > ∅ / [+cons] __ [+son,+cons] $$!! The input is not faithful to Pardess (page 50). Should be "[-long,-stres,+syl,+hi]". The prior context is also not faithful to Pardess page 50 -- this applies *posttonically* -- so it should be "[+prim] [+cons]". The posterior context is also not faithful to Pardess page 50 "Cj V" -- it should be "[+son,+cons] [+syl]". $$!!HITWARNING -- the critic correctly notes that Pardess doesn't explicitly state this happens only to unstressed vowels. He says "usually post-tonic". His examples show only cases where non-stressed vowels (not marked with an acute accent diacritic -- not tonic-- and not initial -- not countertonic) are marked though. Rewriting the rule to lack "-stres" is technically faithful-- but dangerous. The critic did however get that it is a high vowel that is targeted. 
 
-$$!! these rules don't handle the case where BOTH Pardess (p50)'s "Ci" and "Cj" are resonants. The following rule is necessary: [-stres,+hi,-long] > ∅ / [+prim] [+son,+cons] __ [+son,+cons] [+syl]. 
+$$!! these rules don't handle the case where BOTH Pardess (p50)'s "Ci" and "Cj" are resonants. The following rule is necessary: [-stres,+hi,-long] > ∅ / [+prim] [+son,+cons] __ [+son,+cons] [+syl]. $$!!MISS
 
 $ R4B -- Dissimilation tl > kl
 $ $$PG 51-52 $$ should also have 137
@@ -62,10 +73,11 @@ $ $$ET vetlu > vechi 'old'; assla > aschie 'splinter'
 t > k / __ l
 $$:)
 
-$ R5A -- Deletion of word-final oral stops
+$ R5A -- Deletion of word-final oral stops $$!!HIT that it's not just oral but also nasal
 $ $$PG 52-53 $$!! should also have 137. 
-$ $$ET caput > cap 'head'; tenet > ţine '(s)he holds'; videt > vede '(s)he sees'; ridet > ride '(s)he laughs'; post > apoi 'afterwards'; nomen > nume 'name'; sanguinem > sînge 'blood' $$!! also need the following: "sic > și 'and', duc > du 'lead imperat', non > nu 'no; not'".
-[-cont,-son] > ∅ / __ # $$!! input is wrong, because if you look in symbolDefs.csv, nasals are not treated as -cont. Since /s/ is also not hit, feature matching indexed by an alpha feature is needed between continuance and nasality -- nasality and continuance must match, excluding non-nasal continuants like /s/. Thus, the input should be "[ncont,nson]", with n being ideal since it the character is associated with the concept of nasality. The rule should be [ncont,nson] > ∅ / __ #
+$ $$ET caput > cap 'head'; tenet > ţine '(s)he holds'; videt > vede '(s)he sees'; ridet > ride '(s)he laughs'; post > apoi 'afterwards'; nomen > nume 'name'; sanguinem > sînge 'blood' $$!!BADFIX also need the following: "sic > și 'and', duc > du 'lead imperat', non > nu 'no; not'". Critic got only the last one. 
+[-cont,-son] > ∅ / __ # $$!!MISS input is wrong, because if you look in symbolDefs.csv, nasals are not treated as -cont. Since /s/ is also not hit, feature matching indexed by an alpha feature is needed between continuance and nasality -- nasality and continuance must match, excluding non-nasal continuants like /s/. Thus, the input should be "[ncont,nson]", with n being ideal since it the character is associated with the concept of nasality. The rule should be [ncont,nson] > ∅ / __ #
+	$$!!BADFIX -- nasals still aren't [-cont] in symbolDefs so the non-inclusion of nasals in the input is not completely addressed. Otherwise good. 
 
 $ R5B -- Paragogic [e] after word-final [l]
 $ $$PG 53 $$!! should also have page 138. 
@@ -76,18 +88,18 @@ $$:)
 $ R5C -- Metathesis of word-final [r]
 $ $$PG 53 $$!! should also have page 138.
 $ $$ET quattuor > patru 'four'; super > spre 'towards'; inter > între 'between'
-[+syl] r > r [+syl] / __ # $$!! This rule will not work, becuase it will instead cause the final r to syllabify, rather than producing an actual metathesis. This rule will work instead: "∅ [+syl] r > r [+syl] ∅ / __ #" 
+[+syl] r > r [+syl] / __ # $$!!MISS This rule will not work, becuase it will instead cause the final r to syllabify, rather than producing an actual metathesis. This rule will work instead: "∅ [+syl] r > r [+syl] ∅ / __ #"
 
 $ R6 -- Fronting of [w] to [β]
 $ $$PG 54-55 $$!! should also have page 138.
-$ $$ET venire > a veni 'to come'; videt > vede '(s)he sees'; vena > vînă 'vein'; vacca > vacă 'cow'; ventum > vînt 'wind'; vinum > vin 'wine'; ovum > ou 'egg'; novum > nou 'new'; cervum > cerb 'stag'; servare > a serba 'to celebrate'; alvina > albină 'bee' $$!! these words need to also be present: "vetulum > vechi 'old', exvolare > a zbura 'to fly', ad de vero > adevăr 'truth'"
+$ $$ET venire > a veni 'to come'; videt > vede '(s)he sees'; vena > vînă 'vein'; vacca > vacă 'cow'; ventum > vînt 'wind'; vinum > vin 'wine'; ovum > ou 'egg'; novum > nou 'new'; cervum > cerb 'stag'; servare > a serba 'to celebrate'; alvina > albină 'bee' $$!!MISS these words need to also be present: "vetulum > vechi 'old', exvolare > a zbura 'to fly', ad de vero > adevăr 'truth'"
 w > β
 
 $ R7 -- Fortition of syllable-initial [j] to [dj]
 $ $$PG 55-56 $$!! should also have page 138.
 $ $$ET jurare > a jura 'to swear'; jocare > a juca 'to play'; Jovis > joi 'Thursday'
-j > ɟ / # __ $$!! This a plausible rule but not wahat Pardess p55 wrote. This would be correct: "∅ > d / # __ j"
-j > ɟ / [+cons] __ $$!! Since this pertains to syllable initial j, it is actually coming before a vowel that matters. Furthermore, this is /d/ insertion at this stage, even though he calls it fortition. This would be correct: "∅ > d / @ __ j [+syl]"
+j > ɟ / # __ $$!!MISS This a plausible rule but not what Pardess p55 wrote. This would be correct: "∅ > d / # __ j". The critic notes this as a MINOR error "since [dy] and [ɟ] are functionally equivalent in this context", but that statement of equivalence is flatly untrue. 
+j > ɟ / [+cons] __ $$!!MISS Since this pertains to syllable initial j, it is actually coming before a vowel that matters. Furthermore, this is /d/ insertion at this stage, even though he calls it fortition. This would be correct: "∅ > d / @ __ j [+syl]". Pardess' text notes it does come after vowels, although somewhat implicity: "the fortition of [y] probably began in INTERVOCALIC position". Not correcting use of "j" for Pardess' "y" though. 
 
 $ R8 -- Simplification of obstruent + strident + obstruent cluster
 $ $$PG 56 $$!! should also have page 138.
@@ -97,7 +109,7 @@ $$:)
 
 $ R9 -- Deletion of [k] in [nkt]
 $ $$PG 56 $$!! should also have page 138.
-$ $$ET sanctum > sfînt 'holy; saint'; unctum > unt 'grease, butter'; fractum > frînt 'broken' $$!! Should have "franctum > frîmt 'broken'" instead of the last item. 
+$ $$ET sanctum > sfînt 'holy; saint'; unctum > unt 'grease, butter'; fractum > frînt 'broken' $$!!MISS Should have "franctum > frîmt 'broken'", as Pardess does, instead of "frînt". 
 k > ∅ / n __ t
 
 $ R10A -- Sporadic assimilation rs > ss
@@ -116,33 +128,35 @@ $$:)
 $ R10Ca -- Partial assimilation of velars after stressed vowel
 $ ks > ps, kt > pt, gn > mn
 $ $$PG 57-58 $$!! should also have page 138.
-$ $$ET coxa > coapsă 'thigh'; frixi > fripse '(s)he fried'; lacte > lapte 'milk'; factum > fapt 'done'; octo > opt 'eight'; intellectum > înţelept 'wise'; directum > drept 'direct'; noctem > noapte 'night'; pectinem > pieptene 'comb'; dignum > demn 'worthy'; lignum > lemn 'wood'; pugnum > pumn 'fist'; signum > semn 'sign' $$!! the following are missing and need to be included: "lactuca > lăptucă 'lettuce', pectum > piept 'chest'"
-k > p / [+stres,+syl] __ {s;t}
+$ $$ET coxa > coapsă 'thigh'; frixi > fripse '(s)he fried'; lacte > lapte 'milk'; factum > fapt 'done'; octo > opt 'eight'; intellectum > înţelept 'wise'; directum > drept 'direct'; noctem > noapte 'night'; pectinem > pieptene 'comb'; dignum > demn 'worthy'; lignum > lemn 'wood'; pugnum > pumn 'fist'; signum > semn 'sign' $$!!MISS the following are missing and need to be included: "lactuca > lăptucă 'lettuce', pectum > piept 'chest'"
+k > p / [+stres,+syl] __ {s;t} 
 g > m / [+stres,+syl] __ n
+	$$!!NEEDNOTE not perhaps wrong, but it splits the rule into multiple rules in a way Pardess didn't. Pardess has [+cons,+ant,+cor] as posterior context. This is nearly a good infidelity since this doesn't actually happen to /k/ before /r/, /l/. 
 
 $ R10Cb -- Total assimilation of velars before stress (pretonic)
 $ ks > ss, gn > nn
-$ $$PG 59 $$!! should also have page 138.
-$ $$ET laxare > a lăsa 'to let'; exire > a ieşi 'to go out'; cognoscere > a cunoaşte 'to know'
+$ $$PG 59 $$!!MISS should also have pages 60 and 138.
+$ $$ET laxare > a lăsa 'to let'; exire > a ieşi 'to go out'; cognoscere > a cunoaşte 'to know' $$!!MISS missing: "fraxinetum > frăsinet 'ash wood'"
 k > s / [-stres,+syl] __ s
 g > n / [-stres,+syl] __ n
 
 $ R11 -- Labialization of [kw], [gw] before [a]
 $ kwa > pa, gwa > ba
 $ $$PG 60-61 $$!! should also have page 138.
-$ $$ET aqua > apă 'water'; equa > iapă 'mare'; quattuor > patru 'four'; lingua > limbă 'tongue'
+$ $$ET aqua > apă 'water'; equa > iapă 'mare'; quattuor > patru 'four'; lingua > limbă 'tongue' $$!!MISS missing: quadragesima > păresimi "lent", interrogare > întrebare 'to ask'"
 kʷ > p / __ a
 gʷ > b / __ a
+	$$!!HIT non-fidelity to source which actually has something more in line with kw,gw > pw,bw / __ a. 
 
 $ R12 -- Prothesis: #sC > #isC
 $ $$PG 61-62 $$!! should also have page 138.
-$ $$ET scala > scară 'ladder; staircase'; stare > a sta 'to stand; to stay'; squama > scamă 'lint'; spatha > spată 'sword'
-∅ > i / # __ s [-son,-back]
+$ $$ET scala > scară 'ladder; staircase'; stare > a sta 'to stand; to stay'; squama > scamă 'lint'; spatha > spată 'sword' $$!!NEEDNOTE note that having squama not scama is a benign infidelity. 
+∅ > i / # __ s [-son,-back] $$!!MISS posterior context is unfaithful and wrong. It should instead be "s [-son]". Critic treats this as minor and wrongly says "Pardess specifies the C fafter s must be [-back]" but he flatlyh does not, and gives the example of skála > iskála >> scară "ladder, staircase". 
 
 $ R13A -- Lengthening and stress shift of second vowel in hiatus
 $ $$PG 62 $$!! should also have page 138.
 $ $$ET mulierem > muiere 'woman'; parietem > perete 'wall'; arietem > arete 'ram'; capreolum > căprior 'roebuck'
-[-lo,-stres,+syl] > [+long,+stres] / [+syl] __
+[-lo,-stres,+syl] > [+long,+stres] / [+syl] __ $$!! rule formulation is wrong both in fidelity to Pardess and to his intended meaning. Misses entirely the MOVEMENT of stress as well, "semantically". Should instead be: "[+prim,-lo] [+syl] > [-stres] [+prim,+long]". Furthermore, has the second vowel marked as -lo when it is instead the first that has this as a requirement. 
 
 $ R13B -- Raising of short unstressed [o], [e] adjacent to vowel
 $ o > u, e > i in hiatus
@@ -152,61 +166,70 @@ $ $$ET puteum > puţ 'well'; paleam > paie 'straw'; deorsum > jos 'down'; vineam
 [-hi,-stres,-long,+back,+round,+syl] > [+hi] / __ [+syl]
 [-hi,-stres,-long,-back,+front,+syl] > [+hi] / [+syl] __
 [-hi,-stres,-long,-back,+front,+syl] > [+hi] / __ [+syl]
+	$$ these rules are unnecessarily complicated but this is faithful at least
+	$$:) 
 
 $ R13C -- Contraction of identical adjacent vowels
 $ $$PG 63 $$!! should also have page 138.
 $ $$ET mortuum > mortu
-[+syl] [+syl] > [+syl] / @ __
+[+syl] [+syl] > [+syl] / @ __ $$!!MISS Rule formulation is wrong, and unfaithful to both target formalism and Pardess' meaning. For the latter, there is no basis for "@" in prior context. Critic syas this is "a reasonable addition for DiaSim mechanics". It is not; there is no basis for that. Will not work with DiaSim formalsim either, and furthermore does not capture homorganicity of vowels. Not counting as output error since in form the output is like that in Pardess. Need to either enumerate the vowels ("ˈa a > ˈa", "ˈo o > "ˈo", etc...) or use alpha features with two rules, one for when the first element is stressed, one for when the second is: "[αlo,ɛfront,ɩhi,-stres] > ∅ / [αlo,ɛfront,ɩhi] __", and "[αlo,ɛfront,ɩhi,-stres] > ∅ / __ [αlo,ɛfront,ɩhi]"
 
 $ R13D -- Loss of syllabicity of short unstressed high vowels in hiatus
 $ i > j, u > w adjacent to another vowel
 $ $$PG 64 $$!! should also have page 138.
-$ $$ET putium > puţ 'well'; camisia > cămașă 'shirt'; glaciem > gheaţă 'ice'; vinea > vie 'vineyard'
+$ $$ET putium > puţ 'well'; camisia > cămașă 'shirt'; glaciem > gheaţă 'ice'; vinea > vie 'vineyard' $$!!MISS missing: " caseum > caş 'cheese'"
 [+hi,-long,-stres,+syl,-back] > [-syl] / [+syl] __
 [+hi,-long,-stres,+syl,-back] > [-syl] / __ [+syl]
 [+hi,-long,-stres,+syl,+back] > [-syl] / [+syl] __
 [+hi,-long,-stres,+syl,+back] > [-syl] / __ [+syl]
+	$$ these rules are unnecessarily complicated but this is faithful at least
 
 $ R13E -- Laxing of stressed [e] (e > ɛ)
 $ $$PG 64 $$!! should also have page 138.
 $ $$ET leporem > iepure 'hare'; ventum > vînt 'wind'; bene > bine 'well'; ferrum > fier 'iron'; mel > miere 'honey'
-[+syl,-hi,-lo,-back,+stres] > [-tense]
+[+syl,-hi,-lo,-back,+stres] > [-tense] $$ input should perhaps be "+prim" rather than "+stres": "[+syl,-hi,-lo,-back,+prim]". This isn't necessarily unfaithful per se though as Pardess never clarified this. 
 
 $ R13F -- Lengthening of word-final front high vowel
 $ $$PG 65 $$!! should also have page 138.
 $ $$ET facitis > faceţi
 [+hi,-back,+syl] > [+long] / __ (#)
 [+hi,-back,+syl] > [+long] / __ [+cons] #
+	$$!!HIT $$!!BADFIX This should be just a single rule, with the posterior context: "([+cons]) #".  The critic added this as a comment, but didn't fix anything. However it should have, with respect to faithfulness if not correctness, with the exception of the defectiveness of "(#)" as the entire posterior context stipulation (see below). 
+	##!!MISS The format (#) also will not work in target formalism. 
 
 $ R13G -- Lowering of short [i] to [e]
 $ $$PG 66 $$!! should also have page 138.
 $ $$ET camisia > cămașă 'shirt'; pilum > păr 'hair'; videt > vede '(s)he sees'; pirum > păr 'pear tree'; lingua > limbă 'tongue'
 [+hi,-back,-long,+syl] > [-hi]
+	$$:)
+	$$ critic also added helpful note here, good. 
 
 $ R14 -- Apheresis: loss of unstressed initial [e] before [s/z] + C
 $ $$PG 67 $$!! should also have page 138.
-$ $$ET escala > scară 'stair'; espero > sper 'I hope'; exponere > a spune 'to say'; exvolare > a zbura 'to fly'
+$ $$ET escala > scară 'stair'; espero > sper 'I hope'; exponere > a spune 'to say'; exvolare > a zbura 'to fly' $$!!MISS missing: "extrapungere > a străpunge 'to pierce'". 
 e > ∅ / # __ [+strid,+ant,+cor] [-son]
 
 $ R15 -- Vowel contraction in hiatus
 $ $$PG 68 $$!! should also have page 138.
 $ $$ET cohortem > curte; prehendere > prindere; quietum > încet
-[-long,+syl] > ∅ / __ [+long,+stres,+syl]
+[-long,+syl] > ∅ / __ [+long,+stres,+syl] $$!!BADFIX missed the alpha feature α in "αback" in the rule formulation! It should be "[-long,+syl,αback] > ∅ / __ [+long,+prim,αback]". Note that "+syl" is unnecessary since being specified as "+" or "-" for "stres" or "prim" implies "+syl". Critic catches that something is wrong, but mistakes "αback" for "-back". The critic added a note "Pardess's formal rule adds [-back] on both the deleted vowel and the following long stressed vowel", ut this is incoherent since it is not adding a feature to a deleted element. In the report, it understood the semantics of the alpha feature, but represented it with "#" rather than "α"; furthermore, this misreported its actual behavior in the corrected cascade (!!). 
+	$$!!MISS -- the necessary prior consonant is missed entirely. 
 
 $ R16 -- Loss of vowel length
 $ $$PG 68-69 $$!! should also have page 138.
-$ $$ET octo > opt 'eight'; venire > a veni 'to come'; vena > vînă 'vein'; rivum > rîu 'brook'; ridet > ride '(s)he laughs'; volare > a zbura 'to fly'; vinum > vin 'wine'
+$ $$ET octo > opt 'eight'; venire > a veni 'to come'; vena > vînă 'vein'; rivum > rîu 'brook'; ridet > ride '(s)he laughs'; volare > a zbura 'to fly'; vinum > vin 'wine' $$!!MISS omitted, and should be here: "quero > cer 'I ask', habebat > avea '(s)he had imperf'". Instead of "volare > a zbura 'to fly'", should have "exvolare > a zbura 'to fly'". 
 [+syl] > [-long]
 
 $ R17 -- Deletion of wau before a vowel
 $ $$PG 69-70 $$!! should also have page 138.
-$ $$ET quero > cer 'I ask'; quem > cine 'who(m)'; quomodo > cum 'how'; coquere > a coace 'to cook'; sanguinem > sînge 'blood'; aqua > apă 'water'; lingua > limbă 'tongue'; battuere > a bate 'to beat'
+$ $$ET quero > cer 'I ask'; quem > cine 'who(m)'; quomodo > cum 'how'; coquere > a coace 'to cook'; sanguinem > sînge 'blood'; aqua > apă 'water'; lingua > limbă 'tongue'; battuere > a bate 'to beat'. $$!!MISS omitted, and should be here: "quietum > încet 'slow', extinguere > a stinge 'to extinguish', unguere > a unge 'to grease'". 
 w > ∅ / __ [+syl]
 
 $ R18A -- Gemination of stop before [j] after vowel
 $ $$PG 70 $$!! should also have page 138.
 $ $$ET puteum > puţ 'well'; pretium > preţ 'price'; adjutare > a ajuta 'to help'; titionem > tăciune 'ember'; brachium > braţ 'arm'; faciem > faţă 'face'; rubeum > roib 'reddish'; habeam > aibă '(s)he have subjunc'; scabiem > zgaibă 'scab'
 [-son,-cont] > [-son,-cont] [-son,-cont] / [+syl] __ j
+	$$!!MISS this is a somewhat forgivable error but it doesn't specify what the second segment is, which is necessary for target formalism. You can't apply a feature matrix to nothing. It doesn't specify that it's identical. The best way might be with a disjunction: "{b;p;d;t;g;k} > {b b;p p;d d;t t;g g;k k} / __ j". 
 
 $ R18B -- Affrication of alveolar stops before [j]
 $ t > tʃ, d > dʒ / __ j
@@ -214,6 +237,7 @@ $ $$PG 70-71 $$!! should also have page 139.
 $ $$ET puteum > puţ 'well'; pretium > preţ 'price'; titionem > tăciune 'ember'; adjutare > a ajuta 'to help'; deorsum > jos 'down'; prandium > prînz 'lunch'
 t > t͡ʃ / __ j
 d > d͡ʒ / __ j
+	$$!!MISS these were a single rule in the source. For faithfulness, this should either be noted, or done as such, as specified in the source: "[-son,-cont,+ant,+cor,-delrel] > [-ant,+delrel] / __ j".
 
 $ R18C -- Affrication of velars before [j]
 $ k > tʃ, g > dʒ / __ j
@@ -221,47 +245,51 @@ $ $$PG 72 $$!! should also have page 139.
 $ $$ET brachium > braţ 'arm'; faciem > faţă 'face'
 k > t͡ʃ / __ j
 g > d͡ʒ / __ j
+	$$!!MISS these were a single rule in the source. For faithfulness, this should either be noted, or done as such, as specified in the source: "[-cont,-ant,-cor,-delrel] > [+cor,+delrel] / __ j".
 
 $ R18D -- Absorption of [j] after affricate
 $ $$PG 72 $$!! should also have page 139.
-$ $$ET puteum > puţ 'well'; adjutare > a ajuta 'to help'; brachium > braţ 'arm'; faciem > faţă 'face'
+$ $$ET puteum > puţ 'well'; adjutare > a ajuta 'to help'; brachium > braţ 'arm'; faciem > faţă 'face' $$!!MISS missing: "deorsum > jos 'down'"
 j > ∅ / [+delrel] __
+	$$!!NEEDNOTE: source has a much more elaborate prior feature matrix with -son,-cont,+cor. These are in fact unecessary but the simplification to +delrel should be noted. 
 
 $ R18E -- Assimilation of stop to following affricate
 $ $$PG 73 $$!! should also have page 139.
 $ $$ET puteum > puţ 'well'; adjutare > a ajuta 'to help'; brachium > braţ 'arm'; faciem > faţă 'face'
-[-cont] > [+delrel,-ant,+cor] / __ [+delrel,-ant,+cor]
+[-cont] > [+delrel,-ant,+cor] / __ [+delrel,-ant,+cor] $$!!MISS output should be "[+delrel,-ant,+cor,-back]" for target feature system, so we don't get t͡ʃˠt͡ʃ etc.
 
 $ R19 -- Depalatalization of affricates after stressed vowel
 $ tʃ > ts, dʒ > dz / stressed V __
 $ $$PG 73 $$!! should also have page 139.
 $ $$ET puteum > puţ 'well'; brachium > braţ 'arm'; faciem > faţă 'face'; prandium > prînz 'lunch'
-[+delrel,-ant,+cor] > [+ant] / [+stres,+syl] __
+[+delrel,-ant,+cor] > [+ant] / [+stres,+syl] __ $$not counting treating "acc" as prim not stres here, because Pardess is not quite clear about that, except in abbreviations section.
 
 $ R20 -- Glide metathesis (attraction of glide)
 $ $$PG 74 $$!! should also have page 139.
 $ $$ET rubeum > roib 'reddish'; habeam > aibă '(s)he have subjunc'; scabiem > zgaibă 'scab'
-[+stres,+syl] [+cons] j > [+stres,+syl] j [+cons]
+[+stres,+syl] [+cons] j > [+stres,+syl] j [+cons] $$!!MISS this, as a metathesis rule, given that on page x he says "Co = any number of consonants", should be: "∅ > j / [+prim] __ ([+cons])+ j" followed by another rule "j > ∅ / [+prim] j ([+cons])+ __". $$!!NEEDNOTE Ideally, file should contain a warning that this is probably formulated wrong, given the examples. $$!!The format as it is here will actually have the third element j become a consonant. $$!!MISS formulation in Pardess did not specify specifically that this targets /j/, rather than glides  generaly in the title, or the feature matrix [+son,-cons,-syl] in the rule formalism. $$!!MISS actor erroneously converts "Co" which is "any number of consonants" to just one consonant, in both input and output. 
 
 $ R21 -- Spirantization of intervocalic [b]
 $ $$PG 74 $$!! should also have page 139.
 $ $$ET habebat > avea '(s)he had imperf'; bibere > a bea 'to drink'
-b > β / [+syl] __ [+syl]
+b > β / [+syl] __ [+syl] $$!!HIT benign infidelity here. He actually has the context as "[+syl] __". But this is better. But it should be noted for the user. Critic fixes this, but doesn't note this nuance. Not noting it and just imposing fidelity is okay, though, I figure. 
 
 $ R22A -- Word-initial β > v
 $ $$PG 74 $$!! should also have page 139.
 $ $$ET venire > a veni 'to come'; ventum > vînt 'wind'; vacca > vacă 'cow'
 β > v / # __
+	$$:) 
 
 $ R22B -- Occlusivization of β after consonant
 $ $$PG 75 $$!! should also have page 139.
-$ $$ET cervum > cerb 'stag'; servare > a serba 'to celebrate'; alvina > albină 'bee'; volare > a zbura 'to fly'
+$ $$ET cervum > cerb 'stag'; servare > a serba 'to celebrate'; alvina > albină 'bee'; volare > a zbura 'to fly' $$!!MISS last item should be "exvolare > a zbura 'to fly'" or, as Pardess has it, with the intermediate form "zβolare" rather than the source form -- not "volare > a zbura 'to fly'" 
 β > b / [+cons] __
 
 $ R22C -- β > w before resonant
 $ $$PG 76 $$!! should also have page 139.
 $ $$ET stabulum > staul 'stable'; cribrum > ciur 'sieve'; scamnum > scaun 'chair'; damna > daună 'damage'
 β > w / __ [+son,+cons]
+	$$:)
 
 $ R22D -- Sporadic β > g near [u]
 $ $$PG 76 $$!! should also have page 139.
@@ -269,11 +297,13 @@ $ $$ET uber > uger 'udder'; nebula > negură 'fog, mist'; rubum > rug 'blackberr
 $ (sporadic)
 β > g / u __
 β > g / __ u
+	$$:)
 
 $ R22E -- β > ∅ elsewhere
 $ $$PG 77 $$!! should also have page 139.
 $ $$ET novum > nou 'new m sg'; rivum > rîu 'river'; avunculum > unchi 'uncle'; bibere > a bea 'to drink'
 β > ∅
+	$$:)
 
 $ R23 -- Degemination of consonants except [ll], [nn], [rr]
 $ $$PG 78 $$!! should also have page 139.
@@ -287,29 +317,33 @@ k k > k
 g g > g
 f f > f
 s s > s
+	$$!!BADFIX need to add the following rules:  v v > v, m m > m, z z > z, j j > j. "t t͡ʃ > t͡ʃ", "t t͡s > t͡s", "d d͡ʒ > d͡ʒ". Still missing the ones after the period, which are in fact evident in Pardess having brattsu > bratsu. 
 
 $ R24 -- Affrication of velars before front vowel
 $ k > tʃ, g > dʒ / __ e,i
 $ $$PG 79 $$!! should also have page 139.
-$ $$ET caelum > cer 'sky'; cervum > cerb 'stag'; gelu > ger 'frost'; scio > ştiu 'I know'
+$ $$ET caelum > cer 'sky'; cervum > cerb 'stag'; gelu > ger 'frost'; scio > ştiu 'I know' $!! need to add "quaero > cer 'I ask', scis > știi 'you know'" 
 k > t͡ʃ / __ [+syl,-back]
 g > d͡ʒ / __ [+syl,-back]
+	$$!!MISS these were a single rule in the source. For faithfulness, this should either be noted, or done as such, as specified in the source: "[-son,-cont,+ant,+cor,-delrel] > [-ant,+delrel] / __ j".
 
 $ R25A -- Final s > j in monosyllables
 $ s > h > ç > j / __ #
 $ $$PG 79-80 $$!! should also have page 139.
 $ $$ET nos > noi 'we'; vos > voi 'you pl'; post > apoi 'afterwards, then'; tres > trei 'three'
-s > j / [+stres,+syl] __ #
+s > j / [+stres,+syl] __ # $$!!MISS Although this is faithful, this formalism doesn't capture Pardess' stated intention that this applies to MONOSYLLABLES. The rule should be fixed, with a note added. To indicate that these are monosyllables, one can have the following for the prior context: "# ([-syl])* [+stres]". Critic notes this as "a reasonable but imperfect proxy". It should have at least left a note-- or otherwise amended as specified here. 
 
 $ R25B -- Loss of final [s] in polysyllables
-$ $$PG 80-81 $$!! should also have page 139.
+$ $$PG 80-81 $$!! should also have page 139. $$!!MISS should be 81-82. 
 $ $$ET audis > auzi 'you hear sg'; facetis > faceţi 'you do pl'; casas > case 'houses'; lupos > lupi 'wolves'
-s > ∅ / [-stres,+syl] __ #
+s > ∅ / [-stres,+syl] __ # $$!!MISS This should be "s > ∅ / __ #", as Pardess formulates it on page 81: the other final /s/'s have become /j/." Otherwise would need note that [-stres,+syl] as a prior context implies polysyllable even though Pardess did not write it as such. And this might not work, if there are diphthongs. Critic notes this as "a reasonable but imperfect proxy". It should have at least left a note-- or otherwise amended as specified here. 
+ 
 
 $ R25C -- Generalization of word-final [i] as grammatical marker
 $ $$PG 82 $$!! should also have page 139.
 $ $$ET cantas > cînţi 'you sing sg'; vides > vezi 'you see sg'
 $ (morphological analogical spread of 4th conjugation 2sg ending)
+	$$:)
 
 $ ============================================================
 $ COMMON ROMANIAN PERIOD (6th-11th centuries A.D.)
@@ -320,164 +354,194 @@ $ ============================================================
 $ R26A -- [rr] becomes alveolar trill
 $ $$PG 86 $$!! should also have page 139.
 $ $$ET horresco > urăsc 'I hate'; horretum > urît 'ugly'
-rː > [+cont]
+rː > [+cont] $$!!MISS should be "r r > rː". The "rː" was not already present. The critic "fixed" this by replacing "cont" with "rep" which does nothing to solve the segmentality issue. Furthermore by using +rep it actually introduces an error. 
 
 $ R26B -- Word-initial [r] > [rr]
 $ $$PG 86 $$!! should also have page 139.
 $ $$ET reum > rău 'bad'; rivum > rîu 'river'
 r > rː / # __
+	$$!!HIT Critic calls the actor "cascade" here. This is confusing. Don't do this. Both are writing cascade files. But it is write to note the need to reference Pardess' own notation. 
 
 $ R27A -- Tensing of ɛ before nasal + oral consonant (bleeds R27B)
 $ $$PG 87 $$!! should also have page 139.
 $ $$ET tempum > timp 'time'; dentem > dinte 'tooth'; lingua > limbă 'tongue'
 [-tense,+syl] > [+tense] / __ [+nas] [-nas,+cons]
+	$$:)
+	$$ even more ideal would be to note that this should bleed R27B.
 
 $ R27B -- Diphthongization of lax ɛ to jɛ
-$ $$PG 88 $$!! should also have page 139.
-$ $$ET petra > piatră 'stone'; bene > bine 'well'; tenet > ţine '(s)he holds'; equa > iapă 'mare'; caelum > cer 'sky'; pectum > piept 'chest'; taedam > zadă 'larch tree'; terra > ţară 'earth'; sella > şa 'saddle'
+$ $$PG 88 $$!!MISS should also have pages 89 and 139.
+$ $$ET petra > piatră 'stone'; bene > bine 'well'; tenet > ţine '(s)he holds'; equa > iapă 'mare'; caelum > cer 'sky'; pectum > piept 'chest'; taedam > zadă 'larch tree'; terra > ţară 'earth'; sella > şa 'saddle' $$!! missed, should be included: "venet > vine '(s)he comes'"
 ∅ > j / __ [-tense,-back,+syl,-hi,-lo]
 
 $ R28 -- Unstressed o > u
 $ $$PG 89-90 $$!! should also have page 139.
 $ $$ET homo > om 'man'; quando > cînd 'when'; horresco > urăsc 'I hate'; leporem > iepure 'hare'; rogare > a ruga 'to beg'
 [-hi,+back,+round,-stres,+syl,-lo] > [+hi]
+	$$:)
 
 $ R29A -- Loss of stress on postposed article forms of *ellu
 $ $$PG 90-91 $$!! should also have page 139.
-$ $$ET lupum illum > lupul 'the wolf'; casam illam > casa 'the house'
+$ $$ET lupum illum > lupul 'the wolf'; casam illam > casa 'the house' $$!! various words are missing here. But ":)" in that we don't have a morphological rule put in.  
 $ (morphologically conditioned -- article only)
+	
 
 $ R29B -- Apheresis and enclisis of postposed article
 $ $$PG 92 $$!! should also have page 140.
-$ $$ET lupum ellum > lupullu > lupul 'the wolf'; casam ellam > casalla > casa 'the house'
+$ $$ET lupum ellum > lupullu > lupul 'the wolf'; casam ellam > casalla > casa 'the house' $$!! various words are missing here. But ":)" in that we don't have a morphological rule put in.  
 $ (morphologically conditioned -- article only)
 
 $ R30 -- Preyodization of word-initial [e]
 $ $$PG 93 $$!! should also have page 140.
-$ $$ET est > este [yeste] 'is'; illum > el [yel] 'he'; illam > ea [ya] 'she'; ego > eu [yew] 'I'; exire > a ieşi 'to go out'; erat > era [yera] '(s)he was imperf'
+$ $$ET est > este [yeste] 'is'; illum > el [yel] 'he'; illam > ea [ya] 'she'; ego > eu [yew] 'I'; exire > a ieşi 'to go out'; erat > era [yera] '(s)he was imperf' $$!!MISS missing: "illi > ei 'they m', illae > ele 'they f', est > e 'is'"
 ∅ > j / # __ e
 
 $ R31A -- Metaphony: stressed mid-vowels lax before [a] or [e]
 $ except before [n] or [mC]
 $ $$PG 94-95 $$!! should also have page 140.
-$ $$ET nigra > neagră 'black f'; sera > seară 'evening'; mensa > masă 'table'; camisia > cămașă 'shirt'; petra > piatră 'stone'; terra > ţară 'earth'; decem > zece 'ten'; septem > şapte 'seven'; coxa > coapsă 'thigh'; stella > stea 'star'
-[+syl,-hi,-lo,+stres] > [-tense] / __ [+cons]* [-hi,-round,+syl]
+$ $$ET nigra > neagră 'black f'; sera > seară 'evening'; mensa > masă 'table'; camisia > cămașă 'shirt'; petra > piatră 'stone'; terra > ţară 'earth'; decem > zece 'ten'; septem > şapte 'seven'; coxa > coapsă 'thigh'; stella > stea 'star' $$!! missing: "molla > moală 'soft', illa > ea 'she', illae > ele 'they f', penna > pană 'feather'"
+[+syl,-hi,-lo,+stres] > [-tense] / __ [+cons]* [-hi,-round,+syl] $$!!MISS Instead of "[+cons]*" in posterior context, should have "([+cons])+", since Pardess says Co 1+ consonants. Instead of "+stres" in input, should have "+prim". 
+	$$!! Even more ideal to mention that R31A must come after R27B. 
 
 $ R31B -- Diphthongization of lax mid-vowels: ɛ > ea, ɔ > oa
-$ $$PG 95-96 $$!! should also have page 140.
-$ $$ET nigra > neagră 'black f'; sera > seară 'evening'; mensa > masă 'table'; stella > steaua 'the star'; petra > piatră 'stone'; terra > ţară 'earth'; sella > şa 'saddle'; septem > şapte 'seven'; cauda > coadă 'tail'; domina > doamnă 'lady'
+$ $$PG 95-96 $$!! should also have pages 97 and 140.
+$ $$ET nigra > neagră 'black f'; sera > seară 'evening'; mensa > masă 'table'; stella > steaua 'the star'; petra > piatră 'stone'; terra > ţară 'earth'; sella > şa 'saddle'; septem > şapte 'seven'; cauda > coadă 'tail'; domina > doamnă 'lady' $$!!;OSS many items on pages 96 are missing. 
 [-tense,-back,+syl,-hi,-lo] > e̯ a
 [-tense,+back,+syl,-hi,-lo,+round] > o̯ a
+	$$!!NEEDNOTE the rule formalism at it is ends up deleting stress in the target formalism system. 
+	$$!!MISS what Pardess actually has is two rules -- first the a insertion rule, then desyllabification. It is clear from R32 that stress should move before the desyllabification of the first, originaly only, element, but he doesn't explicate it, so it needs a note. 
+	$$!!MISS these rules split what was a single rule for Pardess in two. This should be explicitly stated as such or done more faithfully. One solution be to write two rules like this, with alpha feature concord between the first element of the input and the second of the output (where stress lies if it is present in both cases) to preserve stress in the second: (1) "∅ > a / [+syl,-tense] __", (2) "[-tense,αstres,βprim] a > [-syl] [αstres,βprim]". Or the second aspect, the desyllabification should simply be placed after R32 -- with a note!
+	$$!!MISS in prose Pardess makes clear this is explictily targeting STRESSED vowels (which bear the acute accent). This rule does not indicate this at all. 
+
 
 $ R32 -- Stress shift in éa > eá (e becomes non-syllabic)
 $ $$PG 97-98 $$!! should also have page 140.
 $ $$ET mea > mea 'my'; habebat > avea '(s)he had imperf'
-[+stres] a > [-syl] [+stres] / e __
+[+stres] a > [-syl] [+stres] / e __ 
+	$$!!MISS this rule puts "e" as a prior context, but there is no context at all in Pardess' rule, rather e is part of the input. 
+	$$!!MISS that it is specifcally stressed e is missing from input specification. Should really be ˈe a > e ˈa. 
+	$$!!MISS the actor made a rule where the desyllabification of the first element is included in the output specficiation. Pardess does not do that; that is instead the second aspect of 31B. That should be treated as a separate rule, related to 31B, and this should all be explained in a note. 
 
 $ R33 -- Raising of [a] > [ə] and [o] > [u] before non-geminate nasal
 $ $$PG 98 $$!! should also have page 140.
 $ $$ET quando > cînd 'when'; veteranum > bătrîn 'old man'; bonum > bun 'good m'; montem > munte 'mountain'; comparo > cumpăr 'I buy'
-[+lo,+syl] > [-lo] / __ [+nas,-long]
+[+lo,+syl] > [-lo] / __ [+nas,-long] 
 [+back,-hi,+syl,+round] > [+hi] / __ [+nas,-long]
+	$$!!MISS Pardess has a,o > ə,u here, rather than these two rules with feature matrices. Thus this is unfaithful to the source and at least deserves a note. Furthermore it will not work in DiaSim because simply changing a to [-lo] will not get you [ə] but rather [e]. The most faithful formulation to Pardess would be a rule  {a;o} > {ə;u} / __ [+nas,+cons] [+syl], but this would be erroneous given his examples because (1) his examples all show effects upon primary stressed ˈa and ˈo rather than unstressed a and o, (2) The real context seems to just be a posterior nasal consonant, rather than NV ( quando > cînd 'when'; veteranum > bătrîn 'old man'). These things should have been NOTED. The context does seem to have been fixed but the actor made it an unlong nasal; Pardess does seem to have it not happening before other nasal consonants (annu, doamna) but this, and the rest of this, should have been NOTED.
 
 $ R34 -- Rhotacism: non-geminate l > r between vowels
 $ $$PG 99 $$!! should also have page 140.
 $ $$ET solem > soare 'sun'; melum > măr 'apple'; pilum > păr 'hair'; mel > miere 'honey'; qualem > care 'which'; salem > sare 'salt'
 l > r / [+syl] __ [+syl]
+	$$:) 
 
 $ R35A -- [ll] > [w] before unstressed [a]
 $ $$PG 100 $$!! should also have page 140.
-$ $$ET illa > ea [ya] 'she'; stella > stea [stea] 'star'; casam illam > casa 'the house'; medulla > măduvă 'marrow'; pila > piuă 'fulling mill'
-lː > w / __ [-stres] a
+$ $$ET illa > ea [ya] 'she'; stella > stea [stea] 'star'; casam illam > casa 'the house'; medulla > măduvă 'marrow'; pila > piuă 'fulling mill' $$!!MISS missing "stella illa > steaua 'the star'"
+lː > w / __ [-stres] a $$!!MISS posterior context should just be "a". Pardess has a[-acc]. Without a stress marking, it understood to be unstressed. But this -- "[-stres] a" -- is faithful to nothing. $$!!MISS Pardess has "ll" but this uses [lː]... but it is unclear how ll > lː is clear up to this point. Needs a note, at least.
 
 $ R35B -- Degemination of [ll]
 $ $$PG 101 $$!! should also have page 140.
-$ $$ET caballum > cal 'horse'; molle > moale 'soft f pl'; gallina > găină 'hen'; lupi illi > lupii 'the wolves'
-lː > l
+$ $$ET caballum > cal 'horse'; molle > moale 'soft f pl'; gallina > găină 'hen'; lupi illi > lupii 'the wolves' $$!!MISS missing: "caballum illum > calul 'the horse', stellae illae > stelele 'the starts', molli illi > moi 'soft m pl'"
+lː > l $$!!MISS Pardess has "ll" but this uses [lː]... but it is unclear how ll > lː is clear up to this point. Needs a note, at least.
 
 $ R36A -- Loss of secondary wau: VwV > VV when neither V is stressed
 $ $$PG 101 $$!! should also have page 140.
-$ $$ET casam illam > casa 'the house'; stella illa > steaua 'the star'
-w > ∅ / [-stres,+syl] __ [-stres,+syl,+lo]
+$ $$ET casam illam > casa 'the house'; stella illa > steaua 'the star' $$!!MISS missing "vulpem illa > vulpea 'the fox'" 
+w > ∅ / [-stres,+syl] __ [-stres,+syl,+lo] 
 
 $ R36B -- Lengthening of f.sg definite article [a]
 $ $$PG 102 $$!! should also have page 140.
-$ $$ET diem illam > ziua 'the day'
+$ $$ET diem illam > ziua 'the day' $$!!MISS missing "vulpem illa > vulpea 'the fox'" 
 $ (morphologically conditioned)
 
 $ R36C -- [uw] > [uv]
 $ $$PG 102 $$!! should also have page 140.
 $ $$ET medulla > măduvă 'marrow'
 w > v / u __ a
+	$$:)
 
 $ R37A -- Raising of non-initial unstressed [a] to [ə]
 $ $$PG 102 $$!! should also have page 140.
-$ $$ET casa > casă 'house'; camisia > cămașă 'shirt'; parentem > părinte 'parent'; sanitatem > sănătate 'health'
+$ $$ET casa > casă 'house'; camisia > cămașă 'shirt'; parentem > părinte 'parent'; sanitatem > sănătate 'health' $$!!MISS missing una > unə 'one'". Could also have it as 'ună' but note that the source had ə. 
 [+lo,-stres,+syl,-long] > [-lo] / [+cons] __
 
 $ R37B -- Degemination of geminate vowels
 $ $$PG 103 $$!! should also have page 140.
-$ $$ET casa-a > casa 'the house'; caballum > cal 'horse'; bibere > a bea 'to drink'
-[+syl] [+syl] > [+syl]
+$ $$ET casa-a > casa 'the house'; caballum > cal 'horse'; bibere > a bea 'to drink' $$!!MISS words are missing here. 
+[+syl] [+syl] > [+syl] $$!!MISS will not work for target formalism system, and also unfaithful to Pardess' intention that this the loss of geminate (homorganic) vowels. Should either involve rules like "a a > a", "ˈa a > ˈa", or a rule using alpha features to clarify that he means only identical vowels are affected in this way (and the following is possible because values for lo, front,round, and hi are sufficient to distinguish the vowels here a e i ə o u" : "[αlo,ɛfront,ʊround,ɩhi] > ∅ / [αlo,ɛfront,ʊround,ɩhi] __". Should warn user about loss of stress, or write multiple rules so that stress is preserved. E.g., in this order: "[αlo,ɛfront,ʊround,ɩhi] > ∅ / [αlo,ɛfront,ʊround,ɩhi,+prim] __" , "[αlo,ɛfront,ʊround,ɩhi] > ∅ / __ [αlo,ɛfront,ʊround,ɩhi,+prim]", [αlo,ɛfront,ʊround,ɩhi,+stres] __" , "[αlo,ɛfront,ʊround,ɩhi] > ∅ / __ [αlo,ɛfront,ʊround,ɩhi,+stres]"
 
 $ R38 -- [ea] > [e̯a] (e becomes glide before a)
 $ $$PG 103 $$!! should also have page 140.
 $ $$ET vulpea > vulpea 'the fox'
 e > [-syl] / __ a
+	$$:) 
 
 $ R39 -- Lowering of unstressed internal [i]
 $ $$PG 104 $$!! should also have page 140.
 $ $$ET civitatem > cetate 'fortress'; titionem > tăciune 'ember'; dirigere > a drege 'to mend'; vicinum > vecin 'neighbor'
 [+hi,-back,-stres,+syl] > [-hi] / [+cons] __ [+cons]
+	$$:)
+	$$!! Even more ideal would be to note that this should bleed R40.
 
 $ R40 -- Diphthongization of [i]: i > ji
 $ $$PG 104 $$!! should also have page 140.
 $ $$ET dico > zic 'I say'; linum > in 'flax'; vinum > vin 'wine'; mutire > a amuţi 'to silence'; facetis > faceţi 'you do pl'
 ∅ > j / __ i
+	$$:)
 
 $ R41A -- Palatalization of non-occlusive alveolars before [j]
 $ s > ʃ, l > ʎ, n > ɲ / __ j
 $ $$PG 105 $$!! should also have page 140.
-$ $$ET leporem > iepure 'hare'; paleam > pai(e) 'straw'; linum > in 'flax'; calcaneum > călcîi 'heel'; cuneum > cui 'nail'; vineam > vie 'vineyard'; sessum > şes 'plain'; septem > şapte 'seven'; exire > a ieşi 'to go out'; camisia > cămașă 'shirt'
+$ $$ET leporem > iepure 'hare'; paleam > pai(e) 'straw'; linum > in 'flax'; calcaneum > călcîi 'heel'; cuneum > cui 'nail'; vineam > vie 'vineyard'; sessum > şes 'plain'; septem > şapte 'seven'; exire > a ieşi 'to go out'; camisia > cămașă 'shirt' $$!!MISS missing: "capitaneum > căpătîi 'head of the bed', sic > și 'and'"
 s > ʃ / __ j
 l > ʎ / __ j
 n > ɲ / __ j
+	$$:)
+	$$this matches the description in the rulename, but $$ǃǃNEEDNOTE that it does not really match Pardess' rule. 
 
 $ R41B -- Absorption of [j] after palatal
 $ $$PG 106 $$!! should also have page 140.
 $ $$ET leporem > iepure 'hare'; paleam > pai(e) 'straw'; linum > in 'flax'; cuneum > cui 'nail'; vineam > vie 'vineyard'; sessum > şes 'plain'; septem > şapte 'seven'; exire > a ieşi 'to go out'; camisia > cămașă 'shirt'
 j > ∅ / [-ant,+hi,+cor] __
+	$$!!MISS prior context is just C[+hi] in Pardess -- this will miss sequences of non-coronal palatal + j. 
 
 $ R42A -- Affrication of alveolar stops before [j]: t > ts, d > dz
 $ $$PG 106-107 $$!! should also have page 140.
 $ $$ET texo > ţes 'I weave'; tenet > ţine '(s)he holds'; patire > a păţi 'to experience'; cultellum > cuţit 'knife'; decem > zece 'ten'; dico > zic 'I say'; audire > a auzi 'to hear'
 t > t͡s / __ j
 d > d͡z / __ j
+	$$!!NEEDNOTE note that single rule faithful to Pardess would be: [-cont,+ant,+cor,-delrel] > [+delrel] / __ j"
 
 $ R42B -- Absorption of [j] after affricate
 $ $$PG 107 $$!! should also have page 140.
 $ $$ET texo > ţes 'I weave'; tenet > ţine '(s)he holds'; patire > a păţi 'to experience'; cultellum > cuţit 'knife'; glaciem > gheaţă 'ice'; decem > zece 'ten'; dico > zic 'I say'; audire > a auzi 'to hear'
 j > ∅ / [+delrel] __
+	$$:)
 
 $ R43 -- Palatalization of [l] after velar
 $ $$PG 108 $$!! should also have page 140.
 $ $$ET oculum > ochi 'eye'; vetulum > vechi 'old m'; glaciem > gheaţă 'ice'
 l > ʎ / [-cont,-ant,-cor] __
+	$$:)
 
 $ R44 -- Fronting of [ə] after [ʎ] and [ɲ]
 $ $$PG 108 $$!! should also have page 140.
 $ $$ET vetulam > veche 'old f'; paleam > paie 'straw'; vineam > vie 'vineyard'
-[-lo,+back,+syl,-hi] > [-back,+front] / {ʎ;ɲ} __
+[-lo,+back,+syl,-hi] > [-back,+front] / {ʎ;ɲ} __ $$!!MISS should be: "ə > e / {ʎ;ɲ} __". This rule is not faithful to Pardess, and will actually change /o/ to /ø/ as well.  
 
 $ R45A -- Assimilation s > ʃ before affricate
 $ $$PG 109 $$!! should also have page 140.
 $ $$ET scio > ştiu 'I know'; cresco > creşti 'you grow'
 s > [-ant] / __ [+delrel,-ant]
+	$$!!NEEDNOTE -- although this changes nothing, note that the posterior context is also stipulated as +cor in Pardess, but not here. 
 
 $ R45B -- Dissimilation ʃ > t after ʃ
 $ $$PG 109 $$!! should also have page 140.
 $ $$ET scio > ştiu 'I know'; cresco > creşti 'you grow sg'
-[+delrel,-ant] > [-delrel] / ʃ __
+[+delrel,-ant] > [-delrel] / ʃ __ 
+	$$!!NEEDNOTE -- input is also +cor in Pardess, but not as extracted by the actor; changes nothing but should be noted. 
+	$$!!MISS output is [+ant] in Pardess; this was errantly removed by the actor. The critic notes this in its report but does nothing. Also misreads the č in the input as ë. Critic says this is a minor issue but it is not, as the output would not be t then, but a retracted postalveolar stop. 
 
 $ ============================================================
 $ DACO-ROMANIAN PERIOD (11th century onward)
@@ -488,115 +552,140 @@ $ ============================================================
 $ R46A -- Backing of e/ɛ after labial before back-vowel syllable
 $ e, ɛ > ə, a / labial __ ... V[+back]
 $ $$PG 112 $$!! should also have page 141.
-$ $$ET melum > măr 'apple'; pirum > păr 'pear tree'; video > văd 'I see'; vena > vînă 'vein'; ventum > vînt 'wind'; faenum > fîn 'hay'; vesica > băşică 'bladder'; camisia > cămașă 'shirt'; foeta > fată 'girl'; mensa > masă 'table'; penna > pană 'feather'
-[-back,-hi,+syl] > [+back,-front] / [+lab] __ [+cons]* [+back,+syl]
+$ $$ET melum > măr 'apple'; pirum > păr 'pear tree'; video > văd 'I see'; vena > vînă 'vein'; ventum > vînt 'wind'; faenum > fîn 'hay'; vesica > băşică 'bladder'; camisia > cămașă 'shirt'; foeta > fată 'girl'; mensa > masă 'table'; penna > pană 'feather' $$!!MISS a few words are missing. 
+[-back,-hi,+syl] > [+back,-front] / [+lab] __ [+cons]* [+back,+syl] 
+	$$!!MISS Input should have "[-cons,-back,-hi]" faithfully to source, since glides, which are [-syl], are also affected (e.g. penna > pe̯ánnə > pə̯annə > pana̯ 'feather' etc.) 
+	$$!!MISS formalism for Co should be ([+cons])+ not [+cons]*. 
 
 $ R46B -- Loss of ə before a: əa > a
 $ $$PG 113 $$!! should also have page 141.
 $ $$ET camisia > cămașă 'shirt'; foeta > fată 'girl'; mensa > masă 'table'; penna > pană 'feather'
-ə a > a
+ə a > a $$!!MISS Should be "ə̯ > ∅ / __ a", to be faithful to source. But this almost works, aside from the lack of asyllabicity marking. 
 
 $ R47A -- Raising of ə before n or mCV
-$ ə > ɨ / __ n(C)
+$ ə > ɨ / __ n(C) $$!! minor -- this formalism is not faithful to Pardess. 
 $ $$PG 113 $$!! should also have page 141.
 $ $$ET vena > vînă 'vein'; ventum > vînt 'wind'; canto > cînt 'I sing'; campum > cîmp 'field'; integrum > întreg 'whole'
-ə > ɨ / __ n
+ə > ɨ / __ n 
 ə > ɨ / __ m [+cons] [+syl]
+	$$:)
 
 $ R47B -- Raising of e before nasal
 $ $$PG 114 $$!! should also have page 141.
 $ $$ET bene > bine 'well'; lingua > limbă 'tongue'; tempum > timp 'time'
 e > i / __ [+nas]
+	$$:) 
 
 $ R48 -- Degemination of [nn]
 $ $$PG 114 $$!! should also have page 141.
 $ $$ET annum > an 'year'; penna > pană 'feather'
 nː > n
+	$$:) 
 
 $ R49 -- Raising of ə before r or s plus consonant
 $ $$PG 114 $$!! should also have page 141.
-$ $$ET virtutem > virtute 'virtue'; anserem > gîscă 'goose'; castigare > a cîştiga 'to win'
+$ $$ET virtutem > virtute 'virtue'; anserem > gîscă 'goose'; castigare > a cîştiga 'to win' $$!!MISS should have "gə́ska > gîscă 'goose'", since this item is not from Latin. 
 ə > ɨ / __ r [+cons]
 ə > ɨ / __ s [+cons]
 
 $ R50 -- Backing of front vowels after [rr] (trill)
 $ $$PG 115 $$!! should also have page 141.
-$ $$ET reum > rău 'bad'; horresco > urăsc 'I hate'; ripam > rîpă 'cliff, gully'; rivum > rîu 'river'; ridet > rîde '(s)he laughs'
+$ $$ET reum > rău 'bad'; horresco > urăsc 'I hate'; ripam > rîpă 'cliff, gully'; rivum > rîu 'river'; ridet > rîde '(s)he laughs' 
 [-back,+syl] > [+back] / rː __
+	$$:)
+	$$ critic erroneously calls actor "cascade" here. 
 
 $ R51 -- Simplification of [rr] > [r]
 $ $$PG 115 $$!! should also have page 141.
 $ $$ET reum > rău 'bad'; horresco > urăsc 'I hate'; horretum > urît 'ugly'; ridet > rîde '(s)he laughs'
 rː > r
+	$$:) 
 
 $ R52A -- Deaffrication of voiced alveolar affricate: dz > z
 $ $$PG 116 $$!! should also have page 141.
 $ $$ET diem > zi 'day'; video > vezi 'you see'; prandium > prînz 'lunch'
 d͡z > z
+	$$:)
+	$$ideally also note that he had the feature matrix rule beneath it, but this is good since it was in the rule name/header for the rule's subsection. 
 
 $ R52B -- Deaffrication of voiced palatal affricate before round vowel
 $ dʒ > ʒ / __ o,u
 $ $$PG 116 $$!! should also have page 141.
 $ $$ET jocum > joc 'game'; adjutare > a ajuta 'to help'; jocare > a juca 'to play'
 d͡ʒ > ʒ / __ [+round,+syl]
+	$$:)
+	$$ideally also note that he had the feature matrix rule beneath it, but this is good since it was in the rule name/header for the rule's subsection. 
+	$$ critic erroneously calls actor "cascade" here. 
 
 $ R53A -- Monophthongization of [ea] after ʃ or ts (sporadic)
 $ $$PG 117 $$!! should also have page 141.
 $ $$ET septem > şapte 'seven'; serpentem > şarpe 'snake'; terra > ţară 'land'
 e̯ a > a / {ʃ;t͡s} __
+	$$:) 
+	$$!! Even more ideal would be to note that this must come before R53B. 
 
 $ R53B -- Monophthongization of [ea] before syllable containing [e]
 $ $$PG 117 $$!! should also have page 141.
 $ $$ET mensa-s > mese 'tables'; legem > lege 'law'; videt > vede '(s)he sees'; stella-s > stele 'stars'; penna-s > pene 'feathers'; decem > zece 'ten'; bibere > bere 'drinking'
-e̯ a > e / __ [+cons]* e
+e̯ a > e / __ [+cons]* e $$!!MISS posterior context should have "([+cons])+" instead of "[+cons]*". There must be at least one consonant (hence why we have "([+cons])+" not "([+cons])*") based on the examples. 
 
 $ R54 -- Delateralization of ʎ to j
 $ $$PG 118 $$!! should also have page 141.
-$ $$ET leporem > iepure 'hare'; gallina > găină 'hen'; vetulum > vechi 'old m'; vetulam > veche 'old f'; glaciem > gheaţă 'ice'
+$ $$ET leporem > iepure 'hare'; gallina > găină 'hen'; vetulum > vechi 'old m'; vetulam > veche 'old f'; glaciem > gheaţă 'ice' 
 ʎ > j
+	$$:)
 
 $ R55 -- Denasalization of ɲ to j
 $ $$PG 119 $$!! should also have page 141.
 $ $$ET spunis > spui 'you say'; ponis > pui 'you put'; cuneum > cui 'nail'
 ɲ > j
+	$$!!NEEDNOTE -- that his rule was actually in faeature matrices, though this works too. 
 
 $ R56 -- Loss of j before i
 $ $$PG 119 $$!! should also have page 141.
 $ $$ET gallina > găină 'hen'; spuis > spui 'you say'; bene > bine 'well'; vinum > vin 'wine'; facetis > faceţi 'you do pl'; vineam > vie 'vineyard'
 j > ∅ / __ i
+	$$:)
 
 $ R57 -- jea > ja
 $ $$PG 119-120 $$!! should also have page 141.
 $ $$ET petra > piatră 'stone'; herba > iarbă 'grass'; hiberna > iarnă 'winter'
 j e̯ a > j a
+	$$:) 
 
 $ R58 -- Word-final ə > e after i
 $ $$PG 120 $$!! should also have page 141.
 $ $$ET palearia > pălărie 'hat'; cuttiam > cutie 'box'
 ə > e / i __ #
+	$$:)
 
 $ R59A -- Devoicing of word-final high vowels
 $ (except after consonant + liquid)
 $ $$PG 120 $$!! should also have page 141.
 $ $$ET lupum > lup 'wolf'; bradum > brad 'fir'; vetulum > vechi 'old m'; lupi > lupi 'wolves'; facetis > faceţi 'you do pl'
 $ but: lucrum > lucru 'thing'; pro > pentru 'for'; amplum > amplu 'ample'
-[+hi,+syl] > [-voi] / [+cons] __ #
+[+hi,+syl] > [-voi] / [+cons] __ # 
+	$$!!BADFIX for prior context -- Although this is a hard one, since he describes the input as "not the sequence consonant + liquid", to capture that, for the input we should instead have the disjunction "{[tcons,-tson];[-cons] [+cons,+son]}". The second disjunct covers liquids after non-consonantals. The first disjunct covers all cases where the prior context is anything but a liquid. Alternatively, one could have this rule with no prior context at all, but then have a following rule to address the cases where the prior context is "consonant + liquid": [-cons,-voi] > [+voi,+syl] / [+cons] [+son,+cons] __ #". THe critic notes this but does nothing to fix it; it says "DiaSim rule syntax may not easily encode negative lookahead" but this is not true. However this may not quite be so bad for other downstream purposes. 
 
 $ R59B -- Loss of word-final voiceless w
 $ $$PG 121 $$!! should also have page 141.
 $ $$ET cuneum > cui 'nail'; vetulum > vechi 'old m'; caballum > cal 'horse'
 [-syl,-cons,-voi,+back,+round] > ∅ / __ #
+	$$:)
+	$$!!NEEDNOTE that Pardess instead uses w̥ but (I'm guessing) the critic and actor both were not sure how to parse that symbol, so they used (accurate) feature matrices instead. 
 
 $ R59C -- Word-final ii > i
 $ $$PG 121 $$!! should also have page 141.
 $ $$ET lupi illi > lupii [lupi] 'the wolves'
 i i > i / __ #
+	$$:)
 
 $ R60 -- Loss of final l of masculine singular definite article
 $ $$PG 121-122 $$!! should also have page 141.
 $ $$ET caballum illum > calul [calu] 'the horse'
 $ (morphologically conditioned -- article only)
 l > ∅ / __ #
+	$$:)
 
 $ ============================================================
 $ END OF CASCADE

@@ -1,0 +1,590 @@
+$ Latin to Romanian Sound Changes
+$ Based on Pardess (1990), "From Latin to Romanian: Phonological Rules"
+$ Reformulated in DiaSim cascade format
+$ Rules in relative chronological order
+$
+$ ANNOTATION KEY:
+$   $$PG = page number(s) in Pardess 1990
+$   $$ET = example etyma cited by Pardess (Latin > Romanian)
+
+$ ============================================================
+$ BALKAN ROMANCE PERIOD (1st-6th centuries A.D.)
+$ ============================================================
+
+=Balkan Romance
+
+$ R1 -- Loss of [h]
+$ $$PG 45-46
+$ $$ET homo > om 'man'; prehendere > a prinde 'to grasp'; cohortem > curte 'courtyard'; habere > a avea 'to have'; hiberna > iarnă 'winter'
+h > ∅
+
+$ R2A -- Monophthongization of AE (ae > eː)
+$ $$PG 47
+$ $$ET caelum > cer 'sky'; taedam > zadă 'larch tree'; faenum > fîn 'hay'
+a e̯ > eː
+
+$ R2B -- Monophthongization of OE (oe > eː)
+$ $$PG 47-48
+$ $$ET foetus > făt 'fetus'; foeta > fată 'girl'
+o e̯ > eː
+
+$ R3A -- Reduction of word-final [m]
+$ $$PG 48-49
+$ $$ET quem > cine 'who(m)'; vetulum > vechi 'old'; cum > cu 'with'; quam > ca 'as'
+$ In monosyllables: m > n; in polysyllables: m > ∅
+m > ∅ / [-stres,+syl] __ #
+m > n / [+stres,+syl] __ #
+
+$ R3B -- Loss of [n] before fricative (with compensatory lengthening)
+$ $$PG 49
+$ $$ET mensa > masă 'table'; pensum > păs 'grievance'; densum > des 'often'; mensura > măsură 'measure'; consuere > a coase 'to sew'
+[+syl] n > [+long] ∅ / __ [+cont,-son]
+
+$ R4A -- Syncope (deletion of short unstressed vowels)
+$ $$PG 50-51
+$ $$ET oricula > ureche 'ear'; oculum > ochi 'eye'; vetulum > vechi 'old'; stabulum > staul 'stable'; veteranum > bătrîn 'old man'; calidum > cald 'hot'; dominum > domn 'lord'
+[-long,-stres,+syl] > ∅ / [+son,+cons] __ [+cons]
+[-long,-stres,+syl] > ∅ / [+cons] __ [+son,+cons]
+
+$ R4B -- Dissimilation tl > kl
+$ $$PG 51-52
+$ $$ET vetlu > vechi 'old'; assla > aschie 'splinter'
+t > k / __ l
+
+$ R5A -- Deletion of word-final oral stops
+$ $$PG 52-53
+$ $$ET caput > cap 'head'; tenet > ţine '(s)he holds'; videt > vede '(s)he sees'; ridet > ride '(s)he laughs'; post > apoi 'afterwards'; nomen > nume 'name'; sanguinem > sînge 'blood'
+[-cont,-son] > ∅ / __ #
+
+$ R5B -- Paragogic [e] after word-final [l]
+$ $$PG 53
+$ $$ET mel > miere 'honey'; fel > fiere 'bile'; sal > sare 'salt'
+∅ > e / l __ #
+
+$ R5C -- Metathesis of word-final [r]
+$ $$PG 53
+$ $$ET quattuor > patru 'four'; super > spre 'towards'; inter > între 'between'
+[+syl] r > r [+syl] / __ #
+
+$ R6 -- Fronting of [w] to [β]
+$ $$PG 54-55
+$ $$ET venire > a veni 'to come'; videt > vede '(s)he sees'; vena > vînă 'vein'; vacca > vacă 'cow'; ventum > vînt 'wind'; vinum > vin 'wine'; ovum > ou 'egg'; novum > nou 'new'; cervum > cerb 'stag'; servare > a serba 'to celebrate'; alvina > albină 'bee'
+w > β
+
+$ R7 -- Fortition of syllable-initial [j] to [dj]
+$ $$PG 55-56
+$ $$ET jurare > a jura 'to swear'; jocare > a juca 'to play'; Jovis > joi 'Thursday'
+j > ɟ / # __
+j > ɟ / [+cons] __
+
+$ R8 -- Simplification of obstruent + strident + obstruent cluster
+$ $$PG 56
+$ $$ET abscondere > a ascunde 'to hide'; exvolare > a zbura 'to fly'; exponere > a spune 'to say'
+[-son] > ∅ / __ [+strid] [-son]
+
+$ R9 -- Deletion of [k] in [nkt]
+$ $$PG 56
+$ $$ET sanctum > sfînt 'holy; saint'; unctum > unt 'grease, butter'; fractum > frînt 'broken'
+k > ∅ / n __ t
+
+$ R10A -- Sporadic assimilation rs > ss
+$ $$PG 57
+$ $$ET dorsum > dos 'backside'; deorsum > jos 'down'; sursum > sus 'up'
+$ (sporadic -- ursum remains urs 'bear')
+r s > s s
+
+$ R10B -- Assimilation ps > ss
+$ $$PG 57
+$ $$ET scripsi > scrise '(s)he wrote'
+p s > s s
+
+$ R10Ca -- Partial assimilation of velars after stressed vowel
+$ ks > ps, kt > pt, gn > mn
+$ $$PG 57-58
+$ $$ET coxa > coapsă 'thigh'; frixi > fripse '(s)he fried'; lacte > lapte 'milk'; factum > fapt 'done'; octo > opt 'eight'; intellectum > înţelept 'wise'; directum > drept 'direct'; noctem > noapte 'night'; pectinem > pieptene 'comb'; dignum > demn 'worthy'; lignum > lemn 'wood'; pugnum > pumn 'fist'; signum > semn 'sign'
+k > p / [+stres,+syl] __ {s;t}
+g > m / [+stres,+syl] __ n
+
+$ R10Cb -- Total assimilation of velars before stress (pretonic)
+$ ks > ss, gn > nn
+$ $$PG 59
+$ $$ET laxare > a lăsa 'to let'; exire > a ieşi 'to go out'; cognoscere > a cunoaşte 'to know'
+k > s / [-stres,+syl] __ s
+g > n / [-stres,+syl] __ n
+
+$ R11 -- Labialization of [kw], [gw] before [a]
+$ kwa > pa, gwa > ba
+$ $$PG 60-61
+$ $$ET aqua > apă 'water'; equa > iapă 'mare'; quattuor > patru 'four'; lingua > limbă 'tongue'
+kʷ > p / __ a
+gʷ > b / __ a
+
+$ R12 -- Prothesis: #sC > #isC
+$ $$PG 61-62
+$ $$ET scala > scară 'ladder; staircase'; stare > a sta 'to stand; to stay'; squama > scamă 'lint'; spatha > spată 'sword'
+∅ > i / # __ s [-son,-back]
+
+$ R13A -- Lengthening and stress shift of second vowel in hiatus
+$ $$PG 62
+$ $$ET mulierem > muiere 'woman'; parietem > perete 'wall'; arietem > arete 'ram'; capreolum > căprior 'roebuck'
+[-lo,-stres,+syl] > [+long,+stres] / [+syl] __
+
+$ R13B -- Raising of short unstressed [o], [e] adjacent to vowel
+$ o > u, e > i in hiatus
+$ $$PG 63
+$ $$ET puteum > puţ 'well'; paleam > paie 'straw'; deorsum > jos 'down'; vineam > vie 'vineyard'; caseum > caş 'cheese'
+[-hi,-stres,-long,+back,+round,+syl] > [+hi] / [+syl] __
+[-hi,-stres,-long,+back,+round,+syl] > [+hi] / __ [+syl]
+[-hi,-stres,-long,-back,+front,+syl] > [+hi] / [+syl] __
+[-hi,-stres,-long,-back,+front,+syl] > [+hi] / __ [+syl]
+
+$ R13C -- Contraction of identical adjacent vowels
+$ $$PG 63
+$ $$ET mortuum > mortu
+[+syl] [+syl] > [+syl] / @ __
+
+$ R13D -- Loss of syllabicity of short unstressed high vowels in hiatus
+$ i > j, u > w adjacent to another vowel
+$ $$PG 64
+$ $$ET putium > puţ 'well'; camisia > cămașă 'shirt'; glaciem > gheaţă 'ice'; vinea > vie 'vineyard'
+[+hi,-long,-stres,+syl,-back] > [-syl] / [+syl] __
+[+hi,-long,-stres,+syl,-back] > [-syl] / __ [+syl]
+[+hi,-long,-stres,+syl,+back] > [-syl] / [+syl] __
+[+hi,-long,-stres,+syl,+back] > [-syl] / __ [+syl]
+
+$ R13E -- Laxing of stressed [e] (e > ɛ)
+$ $$PG 64
+$ $$ET leporem > iepure 'hare'; ventum > vînt 'wind'; bene > bine 'well'; ferrum > fier 'iron'; mel > miere 'honey'
+[+syl,-hi,-lo,-back,+stres] > [-tense]
+
+$ R13F -- Lengthening of word-final front high vowel
+$ $$PG 65
+$ $$ET facitis > faceţi
+[+hi,-back,+syl] > [+long] / __ (#)
+[+hi,-back,+syl] > [+long] / __ [+cons] #
+
+$ R13G -- Lowering of short [i] to [e]
+$ $$PG 66
+$ $$ET camisia > cămașă 'shirt'; pilum > păr 'hair'; videt > vede '(s)he sees'; pirum > păr 'pear tree'; lingua > limbă 'tongue'
+[+hi,-back,-long,+syl] > [-hi]
+
+$ R14 -- Apheresis: loss of unstressed initial [e] before [s/z] + C
+$ $$PG 67
+$ $$ET escala > scară 'stair'; espero > sper 'I hope'; exponere > a spune 'to say'; exvolare > a zbura 'to fly'
+e > ∅ / # __ [+strid,+ant,+cor] [-son]
+
+$ R15 -- Vowel contraction in hiatus
+$ $$PG 68
+$ $$ET cohortem > curte; prehendere > prindere; quietum > încet
+[-long,+syl] > ∅ / __ [+long,+stres,+syl]
+
+$ R16 -- Loss of vowel length
+$ $$PG 68-69
+$ $$ET octo > opt 'eight'; venire > a veni 'to come'; vena > vînă 'vein'; rivum > rîu 'brook'; ridet > ride '(s)he laughs'; volare > a zbura 'to fly'; vinum > vin 'wine'
+[+syl] > [-long]
+
+$ R17 -- Deletion of wau before a vowel
+$ $$PG 69-70
+$ $$ET quero > cer 'I ask'; quem > cine 'who(m)'; quomodo > cum 'how'; coquere > a coace 'to cook'; sanguinem > sînge 'blood'; aqua > apă 'water'; lingua > limbă 'tongue'; battuere > a bate 'to beat'
+w > ∅ / __ [+syl]
+
+$ R18A -- Gemination of stop before [j] after vowel
+$ $$PG 70
+$ $$ET puteum > puţ 'well'; pretium > preţ 'price'; adjutare > a ajuta 'to help'; titionem > tăciune 'ember'; brachium > braţ 'arm'; faciem > faţă 'face'; rubeum > roib 'reddish'; habeam > aibă '(s)he have subjunc'; scabiem > zgaibă 'scab'
+[-son,-cont] > [-son,-cont] [-son,-cont] / [+syl] __ j
+
+$ R18B -- Affrication of alveolar stops before [j]
+$ t > tʃ, d > dʒ / __ j
+$ $$PG 70-71
+$ $$ET puteum > puţ 'well'; pretium > preţ 'price'; titionem > tăciune 'ember'; adjutare > a ajuta 'to help'; deorsum > jos 'down'; prandium > prînz 'lunch'
+t > t͡ʃ / __ j
+d > d͡ʒ / __ j
+
+$ R18C -- Affrication of velars before [j]
+$ k > tʃ, g > dʒ / __ j
+$ $$PG 72
+$ $$ET brachium > braţ 'arm'; faciem > faţă 'face'
+k > t͡ʃ / __ j
+g > d͡ʒ / __ j
+
+$ R18D -- Absorption of [j] after affricate
+$ $$PG 72
+$ $$ET puteum > puţ 'well'; adjutare > a ajuta 'to help'; brachium > braţ 'arm'; faciem > faţă 'face'
+j > ∅ / [+delrel] __
+
+$ R18E -- Assimilation of stop to following affricate
+$ $$PG 73
+$ $$ET puteum > puţ 'well'; adjutare > a ajuta 'to help'; brachium > braţ 'arm'; faciem > faţă 'face'
+[-cont] > [+delrel,-ant,+cor] / __ [+delrel,-ant,+cor]
+
+$ R19 -- Depalatalization of affricates after stressed vowel
+$ tʃ > ts, dʒ > dz / stressed V __
+$ $$PG 73
+$ $$ET puteum > puţ 'well'; brachium > braţ 'arm'; faciem > faţă 'face'; prandium > prînz 'lunch'
+[+delrel,-ant,+cor] > [+ant] / [+stres,+syl] __
+
+$ R20 -- Glide metathesis (attraction of glide)
+$ $$PG 74
+$ $$ET rubeum > roib 'reddish'; habeam > aibă '(s)he have subjunc'; scabiem > zgaibă 'scab'
+[+stres,+syl] [+cons] j > [+stres,+syl] j [+cons]
+
+$ R21 -- Spirantization of intervocalic [b]
+$ $$PG 74
+$ $$ET habebat > avea '(s)he had imperf'; bibere > a bea 'to drink'
+b > β / [+syl] __ [+syl]
+
+$ R22A -- Word-initial β > v
+$ $$PG 74
+$ $$ET venire > a veni 'to come'; ventum > vînt 'wind'; vacca > vacă 'cow'
+β > v / # __
+
+$ R22B -- Occlusivization of β after consonant
+$ $$PG 75
+$ $$ET cervum > cerb 'stag'; servare > a serba 'to celebrate'; alvina > albină 'bee'; volare > a zbura 'to fly'
+β > b / [+cons] __
+
+$ R22C -- β > w before resonant
+$ $$PG 76
+$ $$ET stabulum > staul 'stable'; cribrum > ciur 'sieve'; scamnum > scaun 'chair'; damna > daună 'damage'
+β > w / __ [+son,+cons]
+
+$ R22D -- Sporadic β > g near [u]
+$ $$PG 76
+$ $$ET uber > uger 'udder'; nebula > negură 'fog, mist'; rubum > rug 'blackberry'; favum > fagure 'honeycomb'; naevum > neg 'wart'
+$ (sporadic)
+β > g / u __
+β > g / __ u
+
+$ R22E -- β > ∅ elsewhere
+$ $$PG 77
+$ $$ET novum > nou 'new m sg'; rivum > rîu 'river'; avunculum > unchi 'uncle'; bibere > a bea 'to drink'
+β > ∅
+
+$ R23 -- Degemination of consonants except [ll], [nn], [rr]
+$ $$PG 78
+$ $$ET adduco > aduc 'I bring'; brachium > braţ 'arm'; ajutare > a ajuta 'to help'; deorsum > jos 'down'; vacca > vacă 'cow'
+$ but: caballum > cal 'horse'; annum > an 'year'
+p p > p
+b b > b
+t t > t
+d d > d
+k k > k
+g g > g
+f f > f
+s s > s
+
+$ R24 -- Affrication of velars before front vowel
+$ k > tʃ, g > dʒ / __ e,i
+$ $$PG 79
+$ $$ET caelum > cer 'sky'; cervum > cerb 'stag'; gelu > ger 'frost'; scio > ştiu 'I know'
+k > t͡ʃ / __ [+syl,-back]
+g > d͡ʒ / __ [+syl,-back]
+
+$ R25A -- Final s > j in monosyllables
+$ s > h > ç > j / __ #
+$ $$PG 79-80
+$ $$ET nos > noi 'we'; vos > voi 'you pl'; post > apoi 'afterwards, then'; tres > trei 'three'
+s > j / [+stres,+syl] __ #
+
+$ R25B -- Loss of final [s] in polysyllables
+$ $PG 81
+$ $$ET audis > auzi 'you hear sg'; facetis > faceţi 'you do pl'; casas > case 'houses'; lupos > lupi 'wolves'
+s > ∅ / [-stres,+syl] __ #
+
+$ R25C -- Generalization of word-final [i] as grammatical marker
+$ $$PG 82
+$ $$ET cantas > cînţi 'you sing sg'; vides > vezi 'you see sg'
+$ (morphological analogical spread of 4th conjugation 2sg ending)
+
+$ ============================================================
+$ COMMON ROMANIAN PERIOD (6th-11th centuries A.D.)
+$ ============================================================
+
+=Common Romanian
+
+$ R26A -- [rr] becomes alveolar trill
+$ $$PG 86
+$ $$ET horresco > urăsc 'I hate'; horretum > urît 'ugly'
+rː > [+cont]
+
+$ R26B -- Word-initial [r] > [rr]
+$ $$PG 86
+$ $$ET reum > rău 'bad'; rivum > rîu 'river'
+r > rː / # __
+
+$ R27A -- Tensing of ɛ before nasal + oral consonant (bleeds R27B)
+$ $$PG 87
+$ $$ET tempum > timp 'time'; dentem > dinte 'tooth'; lingua > limbă 'tongue'
+[-tense,+syl] > [+tense] / __ [+nas] [-nas,+cons]
+
+$ R27B -- Diphthongization of lax ɛ to jɛ
+$ $$PG 88
+$ $$ET petra > piatră 'stone'; bene > bine 'well'; tenet > ţine '(s)he holds'; equa > iapă 'mare'; caelum > cer 'sky'; pectum > piept 'chest'; taedam > zadă 'larch tree'; terra > ţară 'earth'; sella > şa 'saddle'
+∅ > j / __ [-tense,-back,+syl,-hi,-lo]
+
+$ R28 -- Unstressed o > u
+$ $$PG 89-90
+$ $$ET homo > om 'man'; quando > cînd 'when'; horresco > urăsc 'I hate'; leporem > iepure 'hare'; rogare > a ruga 'to beg'
+[-hi,+back,+round,-stres,+syl,-lo] > [+hi]
+
+$ R29A -- Loss of stress on postposed article forms of *ellu
+$ $$PG 90-91
+$ $$ET lupum illum > lupul 'the wolf'; casam illam > casa 'the house'
+$ (morphologically conditioned -- article only)
+
+$ R29B -- Apheresis and enclisis of postposed article
+$ $$PG 92
+$ $$ET lupum ellum > lupullu > lupul 'the wolf'; casam ellam > casalla > casa 'the house'
+$ (morphologically conditioned -- article only)
+
+$ R30 -- Preyodization of word-initial [e]
+$ $$PG 93
+$ $$ET est > este [yeste] 'is'; illum > el [yel] 'he'; illam > ea [ya] 'she'; ego > eu [yew] 'I'; exire > a ieşi 'to go out'; erat > era [yera] '(s)he was imperf'
+∅ > j / # __ e
+
+$ R31A -- Metaphony: stressed mid-vowels lax before [a] or [e]
+$ except before [n] or [mC]
+$ $$PG 94-95
+$ $$ET nigra > neagră 'black f'; sera > seară 'evening'; mensa > masă 'table'; camisia > cămașă 'shirt'; petra > piatră 'stone'; terra > ţară 'earth'; decem > zece 'ten'; septem > şapte 'seven'; coxa > coapsă 'thigh'; stella > stea 'star'
+[+syl,-hi,-lo,+stres] > [-tense] / __ [+cons]* [-hi,-round,+syl]
+
+$ R31B -- Diphthongization of lax mid-vowels: ɛ > ea, ɔ > oa
+$ $$PG 95-96
+$ $$ET nigra > neagră 'black f'; sera > seară 'evening'; mensa > masă 'table'; stella > steaua 'the star'; petra > piatră 'stone'; terra > ţară 'earth'; sella > şa 'saddle'; septem > şapte 'seven'; cauda > coadă 'tail'; domina > doamnă 'lady'
+[-tense,-back,+syl,-hi,-lo] > e̯ a
+[-tense,+back,+syl,-hi,-lo,+round] > o̯ a
+
+$ R32 -- Stress shift in éa > eá (e becomes non-syllabic)
+$ $$PG 97-98
+$ $$ET mea > mea 'my'; habebat > avea '(s)he had imperf'
+[+stres] a > [-syl] [+stres] / e __
+
+$ R33 -- Raising of [a] > [ə] and [o] > [u] before non-geminate nasal
+$ $$PG 98
+$ $$ET quando > cînd 'when'; veteranum > bătrîn 'old man'; bonum > bun 'good m'; montem > munte 'mountain'; comparo > cumpăr 'I buy'
+[+lo,+syl] > [-lo] / __ [+nas,-long]
+[+back,-hi,+syl,+round] > [+hi] / __ [+nas,-long]
+
+$ R34 -- Rhotacism: non-geminate l > r between vowels
+$ $$PG 99
+$ $$ET solem > soare 'sun'; melum > măr 'apple'; pilum > păr 'hair'; mel > miere 'honey'; qualem > care 'which'; salem > sare 'salt'
+l > r / [+syl] __ [+syl]
+
+$ R35A -- [ll] > [w] before unstressed [a]
+$ $$PG 100
+$ $$ET illa > ea [ya] 'she'; stella > stea [stea] 'star'; casam illam > casa 'the house'; medulla > măduvă 'marrow'; pila > piuă 'fulling mill'
+lː > w / __ [-stres] a
+
+$ R35B -- Degemination of [ll]
+$ $$PG 101
+$ $$ET caballum > cal 'horse'; molle > moale 'soft f pl'; gallina > găină 'hen'; lupi illi > lupii 'the wolves'
+lː > l
+
+$ R36A -- Loss of secondary wau: VwV > VV when neither V is stressed
+$ $$PG 101
+$ $$ET casam illam > casa 'the house'; stella illa > steaua 'the star'
+w > ∅ / [-stres,+syl] __ [-stres,+syl,+lo]
+
+$ R36B -- Lengthening of f.sg definite article [a]
+$ $$PG 102
+$ $$ET diem illam > ziua 'the day'
+$ (morphologically conditioned)
+
+$ R36C -- [uw] > [uv]
+$ $$PG 102
+$ $$ET medulla > măduvă 'marrow'
+w > v / u __ a
+
+$ R37A -- Raising of non-initial unstressed [a] to [ə]
+$ $$PG 102
+$ $$ET casa > casă 'house'; camisia > cămașă 'shirt'; parentem > părinte 'parent'; sanitatem > sănătate 'health'
+[+lo,-stres,+syl,-long] > [-lo] / [+cons] __
+
+$ R37B -- Degemination of geminate vowels
+$ $$PG 103
+$ $$ET casa-a > casa 'the house'; caballum > cal 'horse'; bibere > a bea 'to drink'
+[+syl] [+syl] > [+syl]
+
+$ R38 -- [ea] > [e̯a] (e becomes glide before a)
+$ $$PG 103
+$ $$ET vulpea > vulpea 'the fox'
+e > [-syl] / __ a
+
+$ R39 -- Lowering of unstressed internal [i]
+$ $$PG 104
+$ $$ET civitatem > cetate 'fortress'; titionem > tăciune 'ember'; dirigere > a drege 'to mend'; vicinum > vecin 'neighbor'
+[+hi,-back,-stres,+syl] > [-hi] / [+cons] __ [+cons]
+
+$ R40 -- Diphthongization of [i]: i > ji
+$ $$PG 104
+$ $$ET dico > zic 'I say'; linum > in 'flax'; vinum > vin 'wine'; mutire > a amuţi 'to silence'; facetis > faceţi 'you do pl'
+∅ > j / __ i
+
+$ R41A -- Palatalization of non-occlusive alveolars before [j]
+$ s > ʃ, l > ʎ, n > ɲ / __ j
+$ $$PG 105
+$ $$ET leporem > iepure 'hare'; paleam > pai(e) 'straw'; linum > in 'flax'; calcaneum > călcîi 'heel'; cuneum > cui 'nail'; vineam > vie 'vineyard'; sessum > şes 'plain'; septem > şapte 'seven'; exire > a ieşi 'to go out'; camisia > cămașă 'shirt'
+s > ʃ / __ j
+l > ʎ / __ j
+n > ɲ / __ j
+
+$ R41B -- Absorption of [j] after palatal
+$ $$PG 106
+$ $$ET leporem > iepure 'hare'; paleam > pai(e) 'straw'; linum > in 'flax'; cuneum > cui 'nail'; vineam > vie 'vineyard'; sessum > şes 'plain'; septem > şapte 'seven'; exire > a ieşi 'to go out'; camisia > cămașă 'shirt'
+j > ∅ / [-ant,+hi,+cor] __
+
+$ R42A -- Affrication of alveolar stops before [j]: t > ts, d > dz
+$ $$PG 106-107
+$ $$ET texo > ţes 'I weave'; tenet > ţine '(s)he holds'; patire > a păţi 'to experience'; cultellum > cuţit 'knife'; decem > zece 'ten'; dico > zic 'I say'; audire > a auzi 'to hear'
+t > t͡s / __ j
+d > d͡z / __ j
+
+$ R42B -- Absorption of [j] after affricate
+$ $$PG 107
+$ $$ET texo > ţes 'I weave'; tenet > ţine '(s)he holds'; patire > a păţi 'to experience'; cultellum > cuţit 'knife'; glaciem > gheaţă 'ice'; decem > zece 'ten'; dico > zic 'I say'; audire > a auzi 'to hear'
+j > ∅ / [+delrel] __
+
+$ R43 -- Palatalization of [l] after velar
+$ $$PG 108
+$ $$ET oculum > ochi 'eye'; vetulum > vechi 'old m'; glaciem > gheaţă 'ice'
+l > ʎ / [-cont,-ant,-cor] __
+
+$ R44 -- Fronting of [ə] after [ʎ] and [ɲ]
+$ $$PG 108
+$ $$ET vetulam > veche 'old f'; paleam > paie 'straw'; vineam > vie 'vineyard'
+[-lo,+back,+syl,-hi] > [-back,+front] / {ʎ;ɲ} __
+
+$ R45A -- Assimilation s > ʃ before affricate
+$ $$PG 109
+$ $$ET scio > ştiu 'I know'; cresco > creşti 'you grow'
+s > [-ant] / __ [+delrel,-ant]
+
+$ R45B -- Dissimilation ʃ > t after ʃ
+$ $$PG 109
+$ $$ET scio > ştiu 'I know'; cresco > creşti 'you grow sg'
+[+delrel,-ant] > [-delrel] / ʃ __
+
+$ ============================================================
+$ DACO-ROMANIAN PERIOD (11th century onward)
+$ ============================================================
+
+=Daco-Romanian
+
+$ R46A -- Backing of e/ɛ after labial before back-vowel syllable
+$ e, ɛ > ə, a / labial __ ... V[+back]
+$ $$PG 112
+$ $$ET melum > măr 'apple'; pirum > păr 'pear tree'; video > văd 'I see'; vena > vînă 'vein'; ventum > vînt 'wind'; faenum > fîn 'hay'; vesica > băşică 'bladder'; camisia > cămașă 'shirt'; foeta > fată 'girl'; mensa > masă 'table'; penna > pană 'feather'
+[-back,-hi,+syl] > [+back,-front] / [+lab] __ [+cons]* [+back,+syl]
+
+$ R46B -- Loss of ə before a: əa > a
+$ $$PG 113
+$ $$ET camisia > cămașă 'shirt'; foeta > fată 'girl'; mensa > masă 'table'; penna > pană 'feather'
+ə a > a
+
+$ R47A -- Raising of ə before n or mCV
+$ ə > ɨ / __ n(C)
+$ $$PG 113
+$ $$ET vena > vînă 'vein'; ventum > vînt 'wind'; canto > cînt 'I sing'; campum > cîmp 'field'; integrum > întreg 'whole'
+ə > ɨ / __ n
+ə > ɨ / __ m [+cons] [+syl]
+
+$ R47B -- Raising of e before nasal
+$ $$PG 114
+$ $$ET bene > bine 'well'; lingua > limbă 'tongue'; tempum > timp 'time'
+e > i / __ [+nas]
+
+$ R48 -- Degemination of [nn]
+$ $$PG 114
+$ $$ET annum > an 'year'; penna > pană 'feather'
+nː > n
+
+$ R49 -- Raising of ə before r or s plus consonant
+$ $$PG 114
+$ $$ET virtutem > virtute 'virtue'; anserem > gîscă 'goose'; castigare > a cîştiga 'to win'
+ə > ɨ / __ r [+cons]
+ə > ɨ / __ s [+cons]
+
+$ R50 -- Backing of front vowels after [rr] (trill)
+$ $$PG 115
+$ $$ET reum > rău 'bad'; horresco > urăsc 'I hate'; ripam > rîpă 'cliff, gully'; rivum > rîu 'river'; ridet > rîde '(s)he laughs'
+[-back,+syl] > [+back] / rː __
+
+$ R51 -- Simplification of [rr] > [r]
+$ $$PG 115
+$ $$ET reum > rău 'bad'; horresco > urăsc 'I hate'; horretum > urît 'ugly'; ridet > rîde '(s)he laughs'
+rː > r
+
+$ R52A -- Deaffrication of voiced alveolar affricate: dz > z
+$ $$PG 116
+$ $$ET diem > zi 'day'; video > vezi 'you see'; prandium > prînz 'lunch'
+d͡z > z
+
+$ R52B -- Deaffrication of voiced palatal affricate before round vowel
+$ dʒ > ʒ / __ o,u
+$ $$PG 116
+$ $$ET jocum > joc 'game'; adjutare > a ajuta 'to help'; jocare > a juca 'to play'
+d͡ʒ > ʒ / __ [+round,+syl]
+
+$ R53A -- Monophthongization of [ea] after ʃ or ts (sporadic)
+$ $$PG 117
+$ $$ET septem > şapte 'seven'; serpentem > şarpe 'snake'; terra > ţară 'land'
+e̯ a > a / {ʃ;t͡s} __
+
+$ R53B -- Monophthongization of [ea] before syllable containing [e]
+$ $$PG 117
+$ $$ET mensa-s > mese 'tables'; legem > lege 'law'; videt > vede '(s)he sees'; stella-s > stele 'stars'; penna-s > pene 'feathers'; decem > zece 'ten'; bibere > bere 'drinking'
+e̯ a > e / __ [+cons]* e
+
+$ R54 -- Delateralization of ʎ to j
+$ $$PG 118
+$ $$ET leporem > iepure 'hare'; gallina > găină 'hen'; vetulum > vechi 'old m'; vetulam > veche 'old f'; glaciem > gheaţă 'ice'
+ʎ > j
+
+$ R55 -- Denasalization of ɲ to j
+$ $$PG 119
+$ $$ET spunis > spui 'you say'; ponis > pui 'you put'; cuneum > cui 'nail'
+ɲ > j
+
+$ R56 -- Loss of j before i
+$ $$PG 119
+$ $$ET gallina > găină 'hen'; spuis > spui 'you say'; bene > bine 'well'; vinum > vin 'wine'; facetis > faceţi 'you do pl'; vineam > vie 'vineyard'
+j > ∅ / __ i
+
+$ R57 -- jea > ja
+$ $$PG 119-120
+$ $$ET petra > piatră 'stone'; herba > iarbă 'grass'; hiberna > iarnă 'winter'
+j e̯ a > j a
+
+$ R58 -- Word-final ə > e after i
+$ $$PG 120
+$ $$ET palearia > pălărie 'hat'; cuttiam > cutie 'box'
+ə > e / i __ #
+
+$ R59A -- Devoicing of word-final high vowels
+$ (except after consonant + liquid)
+$ $$PG 120
+$ $$ET lupum > lup 'wolf'; bradum > brad 'fir'; vetulum > vechi 'old m'; lupi > lupi 'wolves'; facetis > faceţi 'you do pl'
+$ but: lucrum > lucru 'thing'; pro > pentru 'for'; amplum > amplu 'ample'
+[+hi,+syl] > [-voi] / [+cons] __ #
+
+$ R59B -- Loss of word-final voiceless w
+$ $$PG 121
+$ $$ET cuneum > cui 'nail'; vetulum > vechi 'old m'; caballum > cal 'horse'
+[-syl,-cons,-voi,+back,+round] > ∅ / __ #
+
+$ R59C -- Word-final ii > i
+$ $$PG 121
+$ $$ET lupi illi > lupii [lupi] 'the wolves'
+i i > i / __ #
+
+$ R60 -- Loss of final l of masculine singular definite article
+$ $$PG 121-122
+$ $$ET caballum illum > calul [calu] 'the horse'
+$ (morphologically conditioned -- article only)
+l > ∅ / __ #
+
+$ ============================================================
+$ END OF CASCADE
+$ ============================================================
+
+~Romanian $ Gold stage: Modern Romanian

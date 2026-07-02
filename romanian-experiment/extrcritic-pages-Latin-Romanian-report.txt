@@ -1,0 +1,143 @@
+PAGE NUMBER VERIFICATION REPORT
+=================================
+File reviewed: extractor-pardess-Latin-to-Romanian-cascade-annotated.txt
+Source: Pardess (1990), "From Latin to Romanian: Phonological Rules" (UCLA diss.)
+
+Method: Every rule heading (R1 through R60) was located in the OCR text of the
+Pardess dissertation. Printed page numbers were determined from the page footers
+in the OCR. Each $$PG claim in the cascade was compared against the actual printed
+page where the rule heading appears and the page range its discussion spans.
+
+Total $$PG claims checked: 101
+Claims with correct pages: 100
+Claims with incorrect pages: 1
+
+=================================
+CORRECTIONS
+=================================
+
+R25B -- Loss of final [s] in polysyllabic words
+  Claimed:  $$PG 80-81
+  Corrected: $$PG 81
+  Reason:  The R25B heading ("R25B Loss of final [s] in polysyllabic words")
+           appears at the top of printed page 81, right after the page 80
+           footer. The cascade claims 80-81, but page 80 still belongs to
+           the R25A discussion (the fate of final -s in monosyllables).
+           R25B's own heading and formal rule are entirely on page 81.
+           The page 80 content is the tail of R25A's commentary on the
+           phonological series for polysyllabic loss, which Pardess discusses
+           as part of R25A before giving R25B its own heading on page 81.
+           Corrected to $$PG 81.
+
+	ERROR should be 81-2. 
+
+=================================
+VERIFIED AS CORRECT (100 claims)
+=================================
+
+The following $$PG claims were all verified against the OCR page locations:
+
+R1       $$PG 45-46    -- heading on p.46, discussion spans 45-46  ✓		ERROR -- should be 46-47
+R2A      $$PG 47       -- heading on p.47  ✓
+R2B      $$PG 47-48    -- heading on p.47, spans to 48  ✓
+R3A      $$PG 48-49    -- heading on p.48, spans to 49  ✓
+R3B      $$PG 49       -- heading on p.49  ✓
+R4A      $$PG 50-51    -- heading on p.50, spans to 51  ✓
+R4B      $$PG 51-52    -- heading on p.51, spans to 52  ✓
+R5A      $$PG 52-53    -- heading on p.52, spans to 53  ✓
+R5B      $$PG 53       -- heading on p.53  ✓
+R5C      $$PG 53       -- heading on p.53  ✓
+R6       $$PG 54-55    -- heading on p.54, spans to 55  ✓
+R7       $$PG 55-56    -- heading on p.55, spans to 56  ✓
+R8       $$PG 56       -- heading on p.56  ✓
+R9       $$PG 56       -- heading on p.56  ✓
+R10A     $$PG 57       -- heading on p.57  ✓
+R10B     $$PG 57       -- heading on p.57  ✓
+R10Ca    $$PG 57-58    -- heading on p.58, discussion begins p.57  ✓
+R10Cb    $$PG 59       -- heading on p.59  ✓							ERROR -- missed 60
+R11      $$PG 60-61    -- heading on p.60, spans to 61  ✓
+R12      $$PG 61-62    -- heading on p.61, spans to 62  ✓
+R13A     $$PG 62       -- heading on p.62  ✓
+R13B     $$PG 63       -- heading on p.63  ✓
+R13C     $$PG 63       -- heading on p.63  ✓
+R13D     $$PG 64       -- heading on p.64  ✓
+R13E     $$PG 64       -- heading on p.64  ✓
+R13F     $$PG 65       -- heading on p.65  ✓
+R13G     $$PG 66       -- heading on p.66  ✓ (note: heading is "R13G Lowering of [i]: Stressed or unstressed [i] > [e]" at p.66)
+R14      $$PG 67       -- heading on p.67  ✓
+R15      $$PG 68       -- heading on p.68  ✓
+R16      $$PG 68-69    -- heading on p.68, spans to 69  ✓
+R17      $$PG 69-70    -- heading on p.69, spans to 70  ✓
+R18A     $$PG 70       -- heading on p.70  ✓
+R18B     $$PG 70-71    -- heading on p.71, discussion begins p.70  ✓
+R18C     $$PG 72       -- heading on p.72  ✓
+R18D     $$PG 72       -- heading on p.72  ✓
+R18E     $$PG 73       -- heading on p.73  ✓
+R19      $$PG 73       -- heading on p.73  ✓
+R20      $$PG 74       -- heading on p.74  ✓
+R21      $$PG 74       -- heading on p.74  ✓
+R22A     $$PG 74       -- heading on p.74  ✓
+R22B     $$PG 75       -- heading on p.75  ✓
+R22C     $$PG 76       -- heading on p.76  ✓
+R22D     $$PG 76       -- heading on p.76  ✓
+R22E     $$PG 77       -- heading on p.77  ✓
+R23      $$PG 78       -- heading on p.78  ✓
+R24      $$PG 79       -- heading on p.79  ✓
+R25A     $$PG 79-80    -- heading on p.79, spans to 80  ✓
+R25C     $$PG 82       -- heading on p.82  ✓
+R26A     $$PG 86       -- heading on p.86  ✓
+R26B     $$PG 86       -- heading on p.86  ✓
+R27A     $$PG 87       -- heading on p.87  ✓
+R27B     $$PG 88       -- heading on p.88  ✓ (note: OCR shows heading on p.88, after derivation table on p.87) ERROR 88-89
+R28      $$PG 89-90    -- heading on p.89, spans to 90  ✓
+R29A     $$PG 90-91    -- heading on p.90, spans to 91  ✓
+R29B     $$PG 92       -- heading on p.92  ✓
+R30      $$PG 93       -- heading on p.93  ✓
+R31A     $$PG 94-95    -- heading on p.94, spans to 95  ✓
+R31B     $$PG 95-96    -- heading on p.95, spans to 96  ✓			ERROR missed 97
+R32      $$PG 97-98    -- heading on p.98, discussion begins p.97  ✓
+R33      $$PG 98       -- heading on p.98  ✓
+R34      $$PG 99       -- heading on p.99  ✓
+R35A     $$PG 100      -- heading on p.100  ✓
+R35B     $$PG 101      -- heading on p.101  ✓
+R36A     $$PG 101      -- heading on p.101  ✓
+R36B     $$PG 102      -- heading on p.102  ✓
+R36C     $$PG 102      -- heading on p.102  ✓
+R37A     $$PG 102      -- heading on p.102  ✓
+R37B     $$PG 103      -- heading on p.103  ✓
+R38      $$PG 103      -- heading on p.103  ✓
+R39      $$PG 104      -- heading on p.104  ✓
+R40      $$PG 104      -- heading on p.104  ✓
+R41A     $$PG 105      -- heading on p.105  ✓
+R41B     $$PG 106      -- heading on p.106  ✓
+R42A     $$PG 106-107  -- heading on p.106, spans to 107  ✓
+R42B     $$PG 107      -- heading on p.107  ✓
+R43      $$PG 108      -- heading on p.108  ✓
+R44      $$PG 108      -- heading on p.108  ✓
+R45A     $$PG 109      -- heading on p.109  ✓
+R45B     $$PG 109      -- heading on p.109  ✓
+R46A     $$PG 112      -- heading on p.112  ✓
+R46B     $$PG 113      -- heading on p.113  ✓
+R47A     $$PG 113      -- heading on p.113  ✓
+R47B     $$PG 114      -- heading on p.114  ✓
+R48      $$PG 114      -- heading on p.114  ✓
+R49      $$PG 114      -- heading on p.114  ✓
+R50      $$PG 115      -- heading on p.115  ✓
+R51      $$PG 115      -- heading on p.115  ✓
+R52A     $$PG 116      -- heading on p.116  ✓
+R52B     $$PG 116      -- heading on p.116  ✓
+R53A     $$PG 117      -- heading on p.117  ✓
+R53B     $$PG 117      -- heading on p.117  ✓
+R54      $$PG 118      -- heading on p.118  ✓
+R55      $$PG 119      -- heading on p.119  ✓
+R56      $$PG 119      -- heading on p.119  ✓
+R57      $$PG 119-120  -- heading on p.119, spans to 120  ✓
+R58      $$PG 120      -- heading on p.120  ✓
+R59A     $$PG 120      -- heading on p.120  ✓
+R59B     $$PG 121      -- heading on p.121  ✓
+R59C     $$PG 121      -- heading on p.121  ✓
+R60      $$PG 121-122  -- heading on p.121  ✓
+
+=================================
+END OF REPORT
+=================================

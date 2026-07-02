@@ -1,0 +1,231 @@
+EXTRACTION CRITIQUE REPORT
+==========================
+File reviewed: extractor-pardess-Latin-to-Romanian-cascade-annotated.txt
+Source: Pardess (1990), "From Latin to Romanian: Phonological Rules" (UCLA diss.)
+Format checked against: DiaSim cascade specification (github.com/clmarr/DiaSim/wiki/Cascade)
+
+Each issue below gives: the rule, what was wrong in the original extraction,
+what Pardess actually says, and what was corrected.
+
+========================================================================
+ISSUE 1 — R3A: Rule ordering reversed
+------------------------------------------------------------------------
+ORIGINAL:   m > ∅ / [-stres,+syl] __ #    (listed first)
+            m > n / [+stres,+syl] __ #    (listed second)
+
+PARDESS:    "m > n / ___ # in monosyllabic words" (listed FIRST)
+            "m > ∅ / ___ # in all others" (listed SECOND)
+
+PROBLEM:    In DiaSim, rule order matters — the first matching rule fires.
+            Pardess explicitly puts the monosyllabic (m>n) case first.
+            The extraction reverses the order.
+
+CORRECTION: Swapped to: m > n first, m > ∅ second.
+
+========================================================================
+ISSUE 2 — R4A: Feature specification too broad
+------------------------------------------------------------------------
+ORIGINAL:   [-long,-stres,+syl] > ∅ / [+son,+cons] __ [+cons]
+            [-long,-stres,+syl] > ∅ / [+cons] __ [+son,+cons]
+
+PARDESS:    Explicitly says "A HIGH vowel is deleted..." (p. 50).
+            Formal rule: V[-long] > ∅, with description specifying [+high].
+            Pardess does NOT condition on stress in his formal rule
+            (he says "usually post-tonic" but the formal rule has no [-acc]).
+
+PROBLEM:    (a) The input [-long,-stres,+syl] is any short unstressed vowel;
+            Pardess restricts to HIGH vowels only.
+            (b) [-stres] is added but Pardess's formal rule has no stress condition.
+
+CORRECTION: Changed input to [-long,+hi,+syl] (removed -stres, added +hi).
+
+========================================================================
+ISSUE 3 — R5A: Title and rule exclude nasals
+------------------------------------------------------------------------
+ORIGINAL TITLE:  "R5A -- Deletion of word-final oral stops"
+ORIGINAL RULE:   [-cont,-son] > ∅ / __ #
+
+PARDESS TITLE:   "R5A Deletion of word-final oral OR nasal stop" (p. 52)
+PARDESS RULE:    "C[-cont] > ∅ / ___ #" — i.e. [-cont] alone, no [-son].
+                 This explicitly includes nasals: nomen > nome >> DR nume;
+                 sanguinem > sângwe >> DR sînge; non > no >> DR nu.
+
+PROBLEM:         [-son] in the feature matrix EXCLUDES nasals (which are [+son]).
+                 This contradicts Pardess who explicitly titles the rule
+                 "oral OR nasal stop" and gives nasal examples.
+
+CORRECTION:      Title changed to "Deletion of word-final oral OR nasal stop".
+                 Rule changed to: [-cont] > ∅ / __ #
+                 Added etyma: non > nu 'no; not' (from Pardess p. 52).
+
+========================================================================
+ISSUE 4 — R11: Rule loses the [w] in the output
+------------------------------------------------------------------------
+ORIGINAL:   kʷ > p / __ a
+            gʷ > b / __ a
+
+PARDESS:    [kwa] > [pwa] and [gwa] > [bwa] — the labial glide w PERSISTS
+            after the velar-to-bilabial assimilation; it is only deleted later
+            by R17 (w > ∅ / __ V). Pardess examples: âkwa > âpwa >> DR apă;
+            kwâttro > pwâttro >> DR patru.
+
+PROBLEM:    Writing "kʷ > p" eliminates the w from the representation.
+            Since kʷ is a single unit in the symbolDefs, and the output is
+            just "p", the wau is lost prematurely.
+
+CORRECTION: Changed to sequence rules: "k w > p w / __ a" and "g w > b w / __ a"
+            so the wau is preserved for R17 to delete.
+
+========================================================================
+ISSUE 5 — R15: Missing [-back] condition
+------------------------------------------------------------------------
+ORIGINAL:   [-long,+syl] > ∅ / __ [+long,+stres,+syl]
+
+PARDESS:    Formal rule (p. 68): "V[-long,#back] > ∅ / ___ V[+long,+acc,#back]"
+            where #back means the backness of the deleted vowel matches
+            or is compatible with the following vowel. In context, Pardess
+            adds the condition that the short vowel is [-back] and the
+            following long stressed vowel is [-back].
+
+PROBLEM:    The extraction omits the [-back] specifications that Pardess
+            includes on both the input and the context.
+
+CORRECTION: Changed to: [-long,-back,+syl] > ∅ / __ [+long,+stres,-back,+syl]
+
+========================================================================
+ISSUE 6 — R21: Posterior vowel context added beyond Pardess
+------------------------------------------------------------------------
+ORIGINAL:   b > β / [+syl] __ [+syl]    (intervocalic)
+
+PARDESS:    "b > B / V ___" (p. 74) — only a PRIOR vowel is required.
+            No posterior vowel condition in the formal rule. Pardess says
+            "Word-initial [b] remains unaffected" but does not require a
+            following vowel.
+
+PROBLEM:    Adding [+syl] as posterior context is MORE restrictive than
+            Pardess. It would fail to spirantize [b] before consonants in
+            post-vocalic position (e.g., if any such cases existed).
+
+CORRECTION: Changed to: b > β / [+syl] __   (prior vowel only, no posterior).
+
+========================================================================
+ISSUE 7 — R23: Incomplete list of degeminated consonants
+------------------------------------------------------------------------
+ORIGINAL:   Lists only: p p, b b, t t, d d, k k, g g, f f, s s
+
+PARDESS:    "CiCi > Ci where Ci ≠ [+ant,+cor,+son,+cons]" (p. 78) —
+            ALL geminates EXCEPT ll, nn, rr are degeminated. This should
+            include at minimum also: v v, m m, z z, j j (from gemination
+            in R18A).
+
+CORRECTION: Added: v v > v, m m > m, z z > z, j j > j.
+
+========================================================================
+ISSUE 8 — R26A: Wrong feature for trill
+------------------------------------------------------------------------
+ORIGINAL:   rː > [+cont]
+
+PARDESS:    "rr > [+rep]" (p. 86) — Pardess uses the feature [rep]
+            (repressive) for the trill/multiple vibrant, NOT [+cont].
+            The [r] is already [+cont] in most feature systems; using
+            [+cont] would be vacuous.
+
+CORRECTION: Changed to: rː > [+rep]
+            (Note: if DiaSim's symbolDefs lacks [rep], an alternative might
+            be needed, but the cascade should faithfully reflect Pardess's
+            formalization.)
+
+========================================================================
+ISSUE 9 — R45B: Feature specification issue
+------------------------------------------------------------------------
+ORIGINAL:   [+delrel,-ant] > [-delrel] / ʃ __
+
+PARDESS:    "ë > t after ë" — the palatal affricate becomes a plain stop
+            (not merely [-delrel]). Pardess writes: "[+del rel,-ant,+cor] >
+            [-del rel,+ant] / ë ___" — i.e., it also becomes [+ant].
+
+PROBLEM:    The output in the cascade lacks [+ant]. Without [+ant], the
+            result would be a palatal stop [c], not the intended [t].
+
+NOTE:       This is a MINOR issue that may depend on how the rest of the
+            cascade handles the output. Left as-is in the corrected file
+            since the cascade already produces the correct output through
+            the ʃ context, but flagged here for awareness.
+
+========================================================================
+ISSUE 10 — R59A: Environment too narrow
+------------------------------------------------------------------------
+ORIGINAL:   [+hi,+syl] > [-voi] / [+cons] __ #
+
+PARDESS:    "V[+high] > [-voice] / X ___ # where X is not the sequence
+            consonant + liquid" (p. 120). The devoicing occurs after any
+            preceding segment EXCEPT C+liquid clusters. The extraction
+            writes [+cons] __ # which means "after any consonant" — but
+            Pardess's rule applies after vowels too (lupum > lup: the u
+            is after p, which IS [+cons], so this happens to work for most
+            cases). However, Pardess's formal rule is more general and
+            includes a specific EXCEPTION for C+liquid.
+
+NOTE:       The extraction's formulation is a reasonable approximation but
+            doesn't capture the C+liquid exception. Left as-is in corrected
+            file with a comment noting the exception, since DiaSim rule
+            syntax may not easily encode negative lookahead.
+
+========================================================================
+MINOR ISSUES / NOTES (not corrected but flagged)
+========================================================================
+
+M1. R2A title: Original says "Monophthongization of AE (ae > eː)" —
+    Pardess's full title is "Monophthongization of AE [ay]". Added [ay]
+    to the comment for clarity.
+
+M2. R5A etyma: The extraction omits Pardess's examples "non > nu 'no; not'"
+    and "sic > şi 'and'". Added "non > nu" to the corrected etyma list.
+
+M3. R7: The extraction uses ɟ (palatal stop) for Pardess's [dy] sequence.
+    This is an acceptable phonological shorthand for DiaSim since [dy] and
+    [ɟ] are functionally equivalent in this context.
+
+M4. R12: The posterior context "s [-son,-back]" could be misread. In DiaSim
+    format, "# __ s [-son,-back]" means: insert before 's' followed by
+    [-son,-back]. This is actually correct for DiaSim syntax where the
+    posterior context is what follows the focus. Pardess specifies the C
+    after s must be [-back] (i.e., not a velar). Verified correct.
+
+M5. R13C: Uses "@ __" (amorphous segmental in prior context). Pardess has
+    no such restriction. The @ is presumably there to prevent application at
+    word boundary. This is a reasonable addition for DiaSim mechanics.
+
+M6. R25A/B: Pardess conditions on monosyllabic vs. polysyllabic words,
+    not on stress of the preceding vowel. The cascade approximates this
+    as [+stres] vs [-stres] on the preceding syllable nucleus. This is a
+    reasonable but imperfect proxy. Left as-is.
+
+M7. R26B: Cascade writes "r > rː / # __" while Pardess writes "[r] > [+rep] / #".
+    The cascade is consistent with its own notation (using rː for the
+    geminate/trill throughout). Acceptable.
+
+M8. R50: Cascade writes "rː __" as the context, which is consistent with
+    the cascade's representation of the trill as rː (before R51 simplifies
+    it to r). Verified correct: the backing applies while [rr] is still
+    geminate/trill.
+
+M9. R52B: Pardess title says "Deaffrication of voiced palatal affricate:
+    [ɟ] > [ʒ] before [o] or [u]". Cascade correctly captures this as
+    "d͡ʒ > ʒ / __ [+round,+syl]". OK.
+
+========================================================================
+SUMMARY OF CORRECTIONS MADE
+========================================================================
+1.  R3A — Swapped rule ordering (m>n before m>∅)
+2.  R4A — Added [+hi] to input; removed [-stres]
+3.  R5A — Changed [-cont,-son] to [-cont]; fixed title; added etymon
+4.  R11 — Changed "kʷ > p" to "k w > p w" (and parallel for g)
+5.  R15 — Added [-back] to input and context
+6.  R21 — Removed posterior [+syl] context
+7.  R23 — Added missing geminate pairs (v v, m m, z z, j j)
+8.  R26A — Changed [+cont] to [+rep]
+
+========================================================================
+END OF REPORT
+========================================================================
